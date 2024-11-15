@@ -11,7 +11,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 120vh;
     margin: 0;
     background-color: #F2F1EB;
 }
@@ -22,14 +22,12 @@ body {
     flex: 5;
 }
 
-
 .content>article {
     flex: 5;
     min-height: 70vh;
     display: flex;
     flex-direction: row;
 }
-
 
 header,
 footer,
@@ -48,6 +46,20 @@ img {
 
 img.kuva {
     margin: 10px;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-start;
+}
+
+.kuva {
+    width: 40%;
+    height: auto;
+    max-height: 80vh;
+    object-fit: cover; /* Varmistaa, että kuvan täyttää määritetyn alueen säilyttäen sen mittasuhteet */
 }
 
 header {
@@ -87,12 +99,10 @@ footer {
     margin-top: auto;
 }
 
-
 th,
 td {
     text-align: left;
 }
-
 
 main {
     display: flex;
