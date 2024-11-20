@@ -67,7 +67,7 @@ li {
     font-size: 18px;
 }
 
-.content>article {
+.main-title>article {
     flex: 5;
     min-height: 70vh;
     display: flex;
@@ -98,4 +98,52 @@ main {
     display: flex;
     justify-content: center;
     padding: 20px;
+}
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+@media (max-width: 768px) {
+    .game {
+        max-width: 100%;
+    }
+
+    .main-title h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Tästä alaspäin on tyylittelyitä, jotka vaikuttaa yksittäiseen "pelikorttiin" */
+.game {
+    background-color: #AFC8AD;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 200px;
+}
+
+.game h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.game img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.results {
+    font-size: 2rem;
+    color: #555;
 }
