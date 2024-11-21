@@ -4,7 +4,7 @@
 * [Ympäristövisat](#ympäristövisat)
   * [Sections](#sections)
     * [Kasvikisailu](#kasvikisailu)
-    * [Ympäristöpoliisi](#ymparistöpoliisi)
+    * [Ympäristöpoliisi](#ympäristöpoliisi)
     * [Ravintotietous](#ravintotietous)
     * [Villivisailu](#villivisailu)
   * [How to use](#how-to-use)
