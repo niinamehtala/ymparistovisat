@@ -4,12 +4,12 @@
 
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12px;
+    font-size: 16px;
     margin: 0;
 }
 
 p {
-    font-size: 17px;
+    font-size: 16px;
     margin-left: 20px;
 }
 
@@ -32,7 +32,7 @@ body {
     flex: 5;
 }
 
-.content > article {
+.content>article {
     flex: 5;
     min-height: 70vh;
     display: flex;
@@ -94,7 +94,7 @@ footer {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     padding-left: 20px;
     padding-right: 20px;
@@ -135,12 +135,14 @@ main {
 
 @media only screen and (max-width: 768px) {
     .content {
-        flex-direction: column; /* Muutetaan järjestys päällekkäin */
-        align-items: center; /* Keskitetään mobiilissa */
-      }
-      
+        flex-direction: column;
+        /* Muutetaan järjestys päällekkäin */
+        align-items: center;
+        /* Keskitetään mobiilissa */
+    }
+
     .infoimage {
         width: 120px;
         height: 200px;
     }
-    }
+}
