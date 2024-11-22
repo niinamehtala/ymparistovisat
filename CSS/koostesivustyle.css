@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 120vh;
+    margin: 0;
+    background-color: #F2F1EB;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #AFC8AD;
+    justify-content: center;
+}
+
+.logo {
+    justify-content: center;
+}
+
+h1 {
+    margin-left: 20px;
+    text-align: center;
+    font-size: 30px;
+}
+
+.col-1 {
+    display: flex;
+    flex-direction: column;
+    flex: 5;
+}
+
+header,
+footer,
+article,
+nav {
+    padding: 1em;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    display: inline-block;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.main-title>article {
+    flex: 5;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: row;
+}
+
+footer {
+    background-color: #AFC8AD;
+    padding: 40px;
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.games-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+
+@media (max-width: 768px) {
+    .game {
+        max-width: 100%;
+    }
+
+    .main-title h1 {
+        font-size: 2rem;
+    }
+}
+
+
+/* Tästä alaspäin on tyylittelyitä, jotka vaikuttaa yksittäiseen "pelikorttiin" */
+.game {
+    background-color: #AFC8AD;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex: 1 1 200px;
+}
+
+.game h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+
+.game img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.results {
+    font-size: 2rem;
+    color: #555;
+}
