@@ -1,0 +1,158 @@
+/* Yleiset tyylit */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #F2F1EB;
+}
+
+header,
+footer {
+    padding: 1em;
+    background-color: #AFC8AD;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0; /* Lisää pystysuuntainen tyhjä tila */
+}
+
+.logo {
+    height: auto;
+    width: 30%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-around; /* Jakaa linkit tasaisesti */
+    padding: 0;
+    margin: 0;
+    width: 70%; /* Rajaa leveys, jotta linkit eivät ole liian lähekkäin */
+}
+
+.nav-list li {
+    margin: 0; /* Poistaa ylimääräiset marginaalit */
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 0 20px; /* Lisää tyhjää linkkien ympärille */
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #8FAE89; /* Vaihda väri hover-tilassa */
+}
+
+/* Pääsisältö */
+.game-start {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+    min-height: 100vh;
+    background-color: #F2F1EB;
+}
+
+.game-start h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.game-image-placeholder {
+    width: 200px;
+    height: 200px;
+    margin: 20px 0;
+    border: 2px dashed #333;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.game-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.start-button {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    background-color: #AFC8AD;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.start-button:hover {
+    transform: scale(1.1);
+    background-color: #8FAE89;
+}
+
+/* Alapalkki */
+footer {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 0;
+}
+
+/* Media queries (responsiivisuus) */
+@media (max-width: 1200px) {
+    .game-start {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .game-start h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-image-placeholder {
+        width: 150px;
+        height: 150px;
+    }
+
+    .game-start h1 {
+        font-size: 2rem;
+    }
+
+    .start-button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .game-image-placeholder {
+        width: 120px;
+        height: 120px;
+    }
+
+    .game-start h1 {
+        font-size: 1.5rem;
+    }
+
+    .start-button {
+        font-size: 1rem;
+    }
+}
