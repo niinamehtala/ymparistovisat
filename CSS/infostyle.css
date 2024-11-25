@@ -133,6 +133,10 @@ main {
     flex: 1;
 } */
 
+.textlink {
+    text-decoration: none;
+}
+
 @media only screen and (max-width: 768px) {
     .content {
         flex-direction: column;
