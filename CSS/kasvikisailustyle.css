@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+header,
+footer,
+nav {
+    padding: 1em;
+}
+
+li {
+    display: inline-block;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-size: 16px;
+}
+
+p,
+h1 {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #F2F1EB;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AFC8AD;
+    padding: 10px;
+    justify-content: center;
+}
+
+.logo {
+    height: auto;
+    width: 30%;
+}
+
+nav {
+    width: 70%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+footer {
+    background-color: #AFC8AD;
+    padding: 40px;
+    width: 100%;
+    position: relative;
+    display: block;
+    margin-top: auto;
+    text-align: center;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        /* Muutetaan järjestys päällekkäin */
+        align-items: center;
+        /* Keskitetään mobiilissa */
+    }
+}
