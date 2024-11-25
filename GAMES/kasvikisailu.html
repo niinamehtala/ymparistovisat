@@ -18,9 +18,33 @@
         </nav>
     </header>
     <main>
-        <article class="content">
-            <div class="text">
+        <div id="main-container">
+            <div class="image-container"></div>
+             <div class="content-container">
+                <!-- Start screen showing in the beginning -->
+                <div id="start-screen" class="container">
+                    <h1>Testaa tietosi kasveista!</h1>
+                    <p>Visan aiheena ovat erilaiset kasvit ja niiden ominaisuudet.<br>
+                        <br>
+                        Lue kysymykset huolellisesti ja valitse mielestäsi oikea vastausvaihtoehto.<br>
+                        Valittuasi vastauksen klikkaa "Seuraava"-painiketta siirtyäksesi eteenpäin.<br>
+                        <br>
+                        Visan loputtua saat selville tuloksen ja kasvitittelisi. Onnea matkaan!</p>
+                    <button id="start-button">Aloita visa</button>
+                </div>
+                <!-- Quiz screen showing when start button is clicked -->
+                <div id="quiz-screen" class="container hidden">
+                    <h2>Kysymys 1.</h2>
+                    <form id="question-form">
+                        <p>Kysymys tähän...?</p>
+                        <label><input type="radio" name="answer" value="1"> Vastaus1</label><br>
+                        <label><input type="radio" name="answer" value="2"> Vastaus2</label><br>
+                        <label><input type="radio" name="answer" value="3"> Vastaus3</label><br>
+                        <button type="submit">Seuraava</button>
+                    </form>
+                </div>
             </div>
+        </div>
         </article>
     </main>
     <footer>
