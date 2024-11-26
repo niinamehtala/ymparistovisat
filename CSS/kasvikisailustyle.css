@@ -70,6 +70,12 @@ nav {
     font-size: 18px;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
 footer {
     background-color: #AFC8AD;
     padding: 40px;
@@ -89,6 +95,24 @@ footer {
     padding-left: 20px;
     padding-right: 20px;
 }
+
+.content-container {
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+/* Kasvikisailu logo showing on left side */
+.image-container {
+    flex: 1;
+}
+
+.kasvikisailulogo {
+    max-width: 550px;
+}
+
+
 
 @media only screen and (max-width: 768px) {
     .content {
