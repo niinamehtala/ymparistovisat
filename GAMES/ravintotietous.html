@@ -10,30 +10,60 @@
 </head>
 
 <body>
-    <!-- Ohjesivu -->
-    <div id="intro" class="view active">
-        <h1 id="game-name">Ravintotietous</h1>
-        <p>Tässä pelissä pääset testaamaan tietouttasi eläinten ravitsemuksesta. Pelissä on 10 kysymystä, ja voit valita
-            oman vastauksesi
-            valmiista vaihtoehdoista. Jokaisen kysymyksen jälkeen näet oikean vastauksen. Pelin jälkeen näet saamasi
-            pisteet.</p>
-        <button id="start-button">Aloita visa</button>
-        <img src="../IMG/ravintotietouskuvat/blueberry-2843770_1920.jpg" alt="Mustikan kuva" />
-    </div>
+    <!-- Header ja navigointi -->
+    <header>
+        <img src="../IMG/yleisetkuvat/logo_visaan.png" alt="logo" class="logo">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="">Etusivu</a></li>
+                <li><a href="./info.html">Info</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Pelit</a>
+                    <div class="dropdown-content">
+                        <a href="./kasvikisailu.html">Kasvikisa</a>
+                        <a href="./luontopoliisi.html">Luontopoliisi</a>
+                        <a href="./ravintotietous.html">Ravintotietoisuus</a>
+                        <a href="./villivisailu.html">Villivisa</a>
+                    </div>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <article class="content">
+            <!-- Aloitussivu -->
+            <div id="intro" class="view active">
+                <h1 id="game-name">Ravintotietous</h1>
+                <p>Tässä pelissä pääset testaamaan tietouttasi eläinten ravitsemuksesta. Pelissä on 10 kysymystä, ja
+                    voit
+                    valita
+                    oman vastauksesi
+                    valmiista vaihtoehdoista. Jokaisen kysymyksen jälkeen näet oikean vastauksen. Pelin jälkeen näet
+                    saamasi
+                    pisteet.</p>
+                <button id="start-button">Aloita visa</button>
+                <img src="../IMG/ravintotietouskuvat/blueberry-2843770_1920.jpg" alt="Mustikan kuva" class="kuva" />
+            </div>
 
-    <!-- Kysymyssivu -->
-    <div id="question-view" class="view">
-        <div id="question-container"></div>
-        <img id="image-container" alt="Kysymyksen kuva" />
-        <select id="options-container"></select>
-        <button id="next-button">Seuraava kysymys</button>
-    </div>
+            <!-- Kysymyssivu -->
+            <div id="question-view" class="view">
+                <div id="question-container"></div>
+                <img id="image-container" alt="Kysymyksen kuva" />
+                <select id="options-container"></select>
+                <button id="next-button">Seuraava kysymys</button>
+            </div>
 
-    <!-- Lopputulossivu -->
-    <div id="result-view" class="view">
-        <h1>Peli päättyi!</h1>
-        <p id="result-message"></p>
-    </div>
+            <!-- Lopputulossivu -->
+            <div id="result-view" class="view">
+                <h1>Tuloksesi:</h1>
+                <p id="result-message"></p>
+            </div>
+        </article>
+    </main>
+    <footer>
+        <div class="footer-content">
+            OAMK, Web-projekti 2024, Ryhmä 3: Niina Mehtälä, Henna Orava, Rosa-Liina Vihelä, Nepu Kontio
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,7 +1,153 @@
+* {
+    box-sizing: border-box;
+}
+
+header,
+footer,
+nav {
+    padding: 1em;
+}
+
+li {
+    display: inline-block;
+}
+
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    font-size: 18px;
+}
+
+p,
+h1 {
+    margin-left: 40px;
+    margin-top: 40px;
+}
+
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serifs;
     text-align: center;
     margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #F2F1EB;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #AFC8AD;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+.logo {
+    height: auto;
+    width: 30%;
+}
+
+nav {
+    width: 70%;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.nav-list li {
+    margin: 0 15px;
+    position: relative;
+}
+
+.nav-list li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #AFC8AD;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #8FAE89;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.text {
+    flex: 1;
+    max-width: 48%;
+}
+
+.kuva {
+    width: 40%;
+    height: 36%;
+    border-radius: 50%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+}
+
+footer {
+    background-color: #AFC8AD;
+    padding: 40px;
+    width: 100%;
+    position: relative;
+    display: block;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    font-size: 16px;
+    font-weight: bold;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 #question-container {
@@ -16,12 +162,17 @@ body {
     display: block;
 }
 
+
 button {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #AFC8AD;
+    color: black;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
+    display: inline-block;
+    margin: 20px auto;
+    font-size: 18px;
+    border-radius: 5px;
 }
 
 button:hover {
@@ -44,4 +195,69 @@ button:hover {
     width: 100%;
     max-width: 400px;
     height: auto;
+}
+
+/* responsiivisuus  */
+@media (max-width: 1200px) {
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p,
+    h1 {
+        margin: 20px auto;
+        text-align: left;
+    }
+
+    .main {
+        padding: 2px;
+    }
+
+    .kuva {
+        width: 44%;
+        height: 44%;
+        border-radius: 50%;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+    }
+
+    .text {
+        text-align: left;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .text {
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    p,
+    h1 {
+        margin: 20px auto;
+        text-align: left;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .text {
+        text-align: left;
+        padding-top: 20px;
+    }
+
+    p,
+    h1 {
+        margin: 20px auto;
+        text-align: left;
+    }
+
+    .logo {
+        width: 300%;
+        height: auto;
+        max-width: 280px;
+    }
 }
