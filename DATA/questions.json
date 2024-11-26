@@ -1,5 +1,16 @@
 [
     {
+        "question": "Mitä kasvinosia kasvinsyöjät yleensä syövät?",
+        "image": "../IMG/ravintotietouskuvat/blueberry-2843770_1920.jpg",
+        "options": [
+            "vain lehtiä",
+            "esim. hedelmiä, lehtiä, siemeniä, juuria",
+            "vain juuria ja oksia",
+            "en tiedä"
+        ],
+        "correct": "esim. hedelmiä, lehtiä, siemeniä, juuria"
+    },
+    {
         "question": "Onko kuvan eläin kaikkiruokainen, lihansyöjä vai kasvinsyöjä?",
         "image": "",
         "options": [
@@ -9,16 +20,5 @@
             "en tiedä"
         ],
         "correct": "kaikkiruokainen"
-    },
-    {
-        "question": "Mitä kasvinosia kasvinsyöjät yleensä syövät?",
-        "image": "",
-        "options": [
-            "vain lehtiä",
-            "esim. hedelmiä, lehtiä, siemeniä, juuria",
-            "vain juuria ja oksia",
-            "en tiedä"
-        ],
-        "correct": "esim. hedelmiä, lehtiä, siemeniä, juuria"
     }
 ]
