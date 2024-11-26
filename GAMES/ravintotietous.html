@@ -5,10 +5,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ravintotietous</title>
+    <script src="../JS/ravintotietousscript.js" defer></script>
+    <link rel="stylesheet" href="../CSS/ravintotietousstyle.css">
 </head>
 
 <body>
+    <!-- Ohjesivu -->
+    <div id="intro" class="view active">
+        <h1 id="game-name">Ravintotietous</h1>
+        <p>Tässä pelissä pääset testaamaan tietouttasi eläinten ravitsemuksesta. Pelissä on 10 kysymystä, ja voit valita
+            oman vastauksesi
+            valmiista vaihtoehdoista. Jokaisen kysymyksen jälkeen näet oikean vastauksen. Pelin jälkeen näet saamasi
+            pisteet.</p>
+        <button id="start-button">Aloita visa</button>
+        <img src="../IMG/ravintotietouskuvat/blueberry-2843770_1920.jpg" alt="Mustikan kuva" />
+    </div>
 
+    <!-- Kysymyssivu -->
+    <div id="question-view" class="view">
+        <div id="question-container"></div>
+        <img id="image-container" alt="Kysymyksen kuva" />
+        <select id="options-container"></select>
+        <button id="next-button">Seuraava kysymys</button>
+    </div>
+
+    <!-- Lopputulossivu -->
+    <div id="result-view" class="view">
+        <h1>Peli päättyi!</h1>
+        <p id="result-message"></p>
+    </div>
 </body>
 
 </html>

@@ -1,0 +1,24 @@
+[
+    {
+        "question": "Onko kuvan eläin kaikkiruokainen, lihansyöjä vai kasvinsyöjä?",
+        "image": "",
+        "options": [
+            "kaikkiruokainen",
+            "lihansyöjä",
+            "kasvinsyöjä",
+            "en tiedä"
+        ],
+        "correct": "kaikkiruokainen"
+    },
+    {
+        "question": "Mitä kasvinosia kasvinsyöjät yleensä syövät?",
+        "image": "",
+        "options": [
+            "vain lehtiä",
+            "esim. hedelmiä, lehtiä, siemeniä, juuria",
+            "vain juuria ja oksia",
+            "en tiedä"
+        ],
+        "correct": "esim. hedelmiä, lehtiä, siemeniä, juuria"
+    }
+]
