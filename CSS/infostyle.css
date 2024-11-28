@@ -117,28 +117,25 @@ main {
     gap: 20px;
 }
 
-/* .imagediv {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    flex: 1;
-} */
-
 .infoimage {
     width: 300px;
     height: 500px;
 }
 
-/* .text {
-    flex: 1;
-} */
+.textlink {
+    text-decoration: none;
+}
+
+#li_imagelist {
+    display: list-item
+}
 
 @media only screen and (max-width: 768px) {
     .content {
+        /*change the order on top of each other and center on mobile*/
         flex-direction: column;
-        /* Muutetaan järjestys päällekkäin */
         align-items: center;
-        /* Keskitetään mobiilissa */
+        
     }
 
     .infoimage {
