@@ -12,7 +12,7 @@
     },
     {
         "question": "Onko kuvan eläin kaikkiruokainen, lihansyöjä vai kasvinsyöjä?",
-        "image": "",
+        "image": "karhun kuva",
         "options": [
             "kaikkiruokainen",
             "lihansyöjä",
@@ -20,5 +20,93 @@
             "en tiedä"
         ],
         "correct": "kaikkiruokainen"
+    },
+    {
+        "question": "Onko kuvan eläin kaikkiruokainen, lihansyöjä vai kasvinsyöjä?",
+        "image": "etanan kuva",
+        "options": [
+            "kaikkiruokainen",
+            "lihansyöjä",
+            "kasvinsyöjä",
+            "en tiedä"
+        ],
+        "correct": "kasvinsyöjä"
+    },
+    {
+        "question": "Mikä näistä on tärkeää huomioida, jos aloittaa talviruokinnan eläimille?",
+        "image": "eläimiä syömässä",
+        "options": [
+            "Ei ole hyvä laittaa liian paljon ruokaa kerralla tarjolle.",
+            "Ruokkimista täytyy jatkaa talven loppuun saakka.",
+            "Ettei anna ruokaa koko talvea.",
+            "En tiedä."
+        ],
+        "correct": "Ruokkimista täytyy jatkaa talven loppuun saakka."
+    },
+    {
+        "question": "Mikä näistä on tärkeää huomioida, kun etsii linnuille hyvää ruokintapaikkaa?",
+        "image": "lintuja lintulaudalla",
+        "options": [
+            "Sen täytyy suojata tuulelta ja pedoilta.",
+            "Sen täytyy olla kaukana asutuksesta.",
+            "Se on hyvä olla maan tasalla.",
+            "En tiedä."
+        ],
+        "correct": "Sen täytyy suojata tuulelta ja pedoilta."
+    },
+    {
+        "question": "Mitä ihminen voi antaa linnuille ruoaksi talvella?",
+        "image": "lintuja",
+        "options": [
+            "leivänmuruja ja pullan palasia",
+            "ruoantähteitä",
+            "esim. auringonkukan siemeniä, pähkinöitä ja talipalloja",
+            "en tiedä"
+        ],
+        "correct": "esim. auringonkukan siemeniä, pähkinöitä ja talipalloja"
+    },
+    {
+        "question": "Miten horroksessa talvensa viettävät eläimet saavat talvella ravintoa?",
+        "image": "talvinen maisema",
+        "options": [
+            "Ne eivät tarvitse talvisin ravintoa.",
+            "Ne heräävät välillä horroksesta etsimään ruokaa.",
+            "Ne saavat energiaa syksyllä keräämästään vararavinnosta.",
+            "En tiedä."
+        ],
+        "correct": "Ne saavat energiaa syksyllä keräämästään vararavinnosta."
+    },
+    {
+        "question": "Mikä näistä eläimistä on hyönteissyöjä?",
+        "image": "hyönteisiä",
+        "options": [
+            "päästäinen",
+            "muikku",
+            "varpunen",
+            "en tiedä"
+        ],
+        "correct": "päästäinen"
+    },
+    {
+        "question": "Mikä näistä eläimistä on lihansyöjä?",
+        "image": "joku kuva",
+        "options": [
+            "kana",
+            "jänis",
+            "kyykäärme",
+            "en tiedä"
+        ],
+        "correct": "kyykäärme"
+    },
+    {
+        "question": "Mitä karhut syövät?",
+        "image": "karhu",
+        "options": [
+            "esim. marjoja, kaloja, nisäkkäitä",
+            "vain matelijoita",
+            "pääasiassa kasveja",
+            "en tiedä"
+        ],
+        "correct": "esim. marjoja, kaloja, nisäkkäitä"
     }
 ]

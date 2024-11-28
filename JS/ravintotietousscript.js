@@ -5,6 +5,7 @@
 
 //1.Muuttujat:
 let questions = [];
+
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 
@@ -24,7 +25,6 @@ const resultMessage = document.getElementById("result-message");
 
 
 // Kuuntelijat:
-
 startButton.addEventListener("click", () => {
     currentQuestionIndex = 0;
     correctAnswers = 0;
@@ -49,9 +49,12 @@ nextButton.addEventListener("click", () => {
     }
 });
 
+loadQuestions();
 
 //3.Funktiot:
 //Kysymysten lataus:
+/* Tälle funktiolle täytyy tehdä kutsu, muuten se ei lue json-tiedostoa.
+Voiko kutsu olla tämä: loadQuestions();  ?? ja mihin kohtaan se tulee?*/
 async function loadQuestions() {
     try {
         const response = await fetch("../DATA/questions.json"); // Onko polku oikein?
