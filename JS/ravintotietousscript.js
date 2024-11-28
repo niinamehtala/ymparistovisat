@@ -3,9 +3,11 @@
 //2.Elementit ja kuuntelijat
 //3.Funktiot
 
-//1.Muuttujat:
-let questions = [];
+//Tiedot haetaan staattisesti
+import questions from '../DATA/questions.json' with { type: "json" };
 
+//1.Muuttujat:.
+// let questions = [];
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 
@@ -45,25 +47,27 @@ nextButton.addEventListener("click", () => {
         showQuestion();
     } else {
         showView(resultView);
-        resultMessage.textContent = `Sait oikein ${correctAnswers} kysymystä ${questions.length} kysymyksestä.`;
+        resultMessage.textContent = `Sait ${correctAnswers}/${questions.length} pistettä!`;
     }
 });
 
-loadQuestions();
+// addEventListener("DOMContentLoaded", () => {
+//     loadQuestions()
+// })
+
 
 //3.Funktiot:
 //Kysymysten lataus:
-/* Tälle funktiolle täytyy tehdä kutsu, muuten se ei lue json-tiedostoa.
-Voiko kutsu olla tämä: loadQuestions();  ?? ja mihin kohtaan se tulee?*/
-async function loadQuestions() {
-    try {
-        const response = await fetch("../DATA/questions.json"); // Onko polku oikein?
-        questions = await response.json();
-        console.log("Kysymykset ladattu:", questions);
-    } catch (error) {
-        console.error("Kysymysten lataus epäonnistui:", error);
-    }
-}
+// async function loadQuestions() {
+//     try {
+//         console.log("heippa");
+//         const response = await fetch("../DATA/questions.json");
+//         questions = await response.json();
+//         console.log("Kysymykset ladattu:", questions);
+//     } catch (error) {
+//         console.error("Kysymysten lataus epäonnistui:", error);
+//     }
+// }
 
 // Näytä tietty näkymä ja piilota muut
 function showView(view) {
@@ -117,9 +121,9 @@ function showResults() {
 }
 
 
-//Testi, latautuuko kysymykset
-console.log("Yritetään ladata tiedostoa ../DATA/questions.json");
+// //Testi, latautuuko kysymykset
+// console.log("Yritetään ladata tiedostoa ../DATA/questions.json");
 
-if (questions.length === 0) {
-    console.error("Kysymyksiä ei ladattu! Tarkista JSON-tiedoston polku tai sisältö.");
-}
+// if (questions.length === 0) {
+//     console.error("Kysymyksiä ei ladattu! Tarkista JSON-tiedoston polku tai sisältö.");
+// }
