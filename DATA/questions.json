@@ -1,7 +1,7 @@
 [
     {
         "question": "Mitä kasvinosia kasvinsyöjät yleensä syövät?",
-        "image": "../IMG/ravintotietouskuvat/blueberry-2843770_1920.jpg",
+        "image": "../IMG/ravintotietouskuvat/1.kysymys_kukka.jpg",
         "options": [
             "vain lehtiä",
             "esim. hedelmiä, lehtiä, siemeniä, juuria",
@@ -12,7 +12,7 @@
     },
     {
         "question": "Onko kuvan eläin kaikkiruokainen, lihansyöjä vai kasvinsyöjä?",
-        "image": "karhun kuva",
+        "image": "../IMG/ravintotietouskuvat/2.kysymys_karhu.jpg",
         "options": [
             "kaikkiruokainen",
             "lihansyöjä",
@@ -23,7 +23,7 @@
     },
     {
         "question": "Onko kuvan eläin kaikkiruokainen, lihansyöjä vai kasvinsyöjä?",
-        "image": "etanan kuva",
+        "image": "../IMG/ravintotietouskuvat/3.kysymys_etana.jpg",
         "options": [
             "kaikkiruokainen",
             "lihansyöjä",
@@ -34,7 +34,7 @@
     },
     {
         "question": "Mikä näistä on tärkeää huomioida, jos aloittaa talviruokinnan eläimille?",
-        "image": "eläimiä syömässä",
+        "image": "../IMG/ravintotietouskuvat/4.kysymys_lintu.jpg",
         "options": [
             "Ei ole hyvä laittaa liian paljon ruokaa kerralla tarjolle.",
             "Ruokkimista täytyy jatkaa talven loppuun saakka.",
@@ -45,7 +45,7 @@
     },
     {
         "question": "Mikä näistä on tärkeää huomioida, kun etsii linnuille hyvää ruokintapaikkaa?",
-        "image": "lintuja lintulaudalla",
+        "image": "../IMG/ravintotietouskuvat/5.kysymys_lintu_syo.jpg",
         "options": [
             "Sen täytyy suojata tuulelta ja pedoilta.",
             "Sen täytyy olla kaukana asutuksesta.",
@@ -56,7 +56,7 @@
     },
     {
         "question": "Mitä ihminen voi antaa linnuille ruoaksi talvella?",
-        "image": "lintuja",
+        "image": "../IMG/ravintotietouskuvat/6.kysymys_lintu.jpg",
         "options": [
             "leivänmuruja ja pullan palasia",
             "ruoantähteitä",
@@ -67,7 +67,7 @@
     },
     {
         "question": "Miten horroksessa talvensa viettävät eläimet saavat talvella ravintoa?",
-        "image": "talvinen maisema",
+        "image": "../IMG/ravintotietouskuvat/7.kysymys_talvi.jpg",
         "options": [
             "Ne eivät tarvitse talvisin ravintoa.",
             "Ne heräävät välillä horroksesta etsimään ruokaa.",
@@ -78,7 +78,7 @@
     },
     {
         "question": "Mikä näistä eläimistä on hyönteissyöjä?",
-        "image": "hyönteisiä",
+        "image": "../IMG/ravintotietouskuvat/8.kysymys_hyonteisia.jpg",
         "options": [
             "päästäinen",
             "muikku",
@@ -89,7 +89,7 @@
     },
     {
         "question": "Mikä näistä eläimistä on lihansyöjä?",
-        "image": "joku kuva",
+        "image": "../IMG/ravintotietouskuvat/9.kysymys_orava_syo.jpg",
         "options": [
             "kana",
             "jänis",
@@ -100,7 +100,7 @@
     },
     {
         "question": "Mitä karhut syövät?",
-        "image": "karhu",
+        "image": "../IMG/ravintotietouskuvat/10.kysymys_karhu.jpg",
         "options": [
             "esim. marjoja, kaloja, nisäkkäitä",
             "vain matelijoita",
