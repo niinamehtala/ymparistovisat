@@ -25,7 +25,6 @@ const nextButton = document.getElementById("next-button");
 const resultMessage = document.getElementById("result-message");
 
 
-
 // Kuuntelijat:
 startButton.addEventListener("click", () => {
     currentQuestionIndex = 0;
