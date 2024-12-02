@@ -32,22 +32,25 @@
         <article class="content">
             <!-- Aloitussivu -->
             <div id="intro" class="view active">
-                <h1 id="game-name">Ravintotietous</h1>
-                <p>Tässä pelissä pääset testaamaan tietouttasi eläinten ravitsemuksesta. Pelissä on 10 kysymystä, ja
-                    voit
-                    valita
-                    oman vastauksesi
-                    valmiista vaihtoehdoista. Jokaisen kysymyksen jälkeen näet oikean vastauksen. Pelin jälkeen näet
-                    saamasi
-                    pisteet.</p>
-                <button id="start-button">Aloita visa</button>
+                <!-- tähän lisäsin divin text-content -->
+                <div class="text-content">
+                    <h1 id="game-name">Ravintotietous</h1>
+                    <p>Tässä pelissä pääset testaamaan tietouttasi eläinten ravitsemuksesta. Pelissä on 10 kysymystä, ja
+                        voit
+                        valita
+                        oman vastauksesi
+                        valmiista vaihtoehdoista. Jokaisen kysymyksen jälkeen näet oikean vastauksen. Pelin jälkeen näet
+                        saamasi
+                        pisteet.</p>
+                    <button id="start-button">Aloita visa</button>
+                </div>
                 <img src="../IMG/ravintotietouskuvat/blueberry-2843770_1920.jpg" alt="Mustikan kuva" class="kuva" />
             </div>
 
             <!-- Kysymyssivu -->
             <div id="question-view" class="view">
                 <div id="question-container"></div>
-                <img id="image-container" alt="Kysymyksen kuva" />
+                <img id="image-container" alt="Kysymyskuva" />
                 <select id="options-container"></select>
                 <button id="next-button">Seuraava kysymys</button>
             </div>

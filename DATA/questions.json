@@ -2,6 +2,7 @@
     {
         "question": "Mitä kasvinosia kasvinsyöjät yleensä syövät?",
         "image": "../IMG/ravintotietouskuvat/1.kysymys_kukka.jpg",
+        "alt": "Tässä on kuva mansikan kukasta",
         "options": [
             "vain lehtiä",
             "esim. hedelmiä, lehtiä, siemeniä, juuria",
@@ -89,7 +90,7 @@
     },
     {
         "question": "Mikä näistä eläimistä on lihansyöjä?",
-        "image": "../IMG/ravintotietouskuvat/9.kysymys_orava_syo.jpg",
+        "image": "../IMG/ravintotietouskuvat/9.kysymys_orava_vaaka.jpg",
         "options": [
             "kana",
             "jänis",
