@@ -239,6 +239,10 @@ button {
     background-color: #F2F1EB;
 }
 
+#question-container {
+    font-weight: bold;
+}
+
 
 /* responsiivisuus  */
 @media (max-width: 1200px) {
