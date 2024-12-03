@@ -124,8 +124,8 @@ main {
 }
 
 .kuva {
-    width: 400px;
-    height: 400px;
+    width: 350px;
+    height: 350px;
     border-radius: 50%;
     object-fit: cover;
     aspect-ratio: 1 / 1;
@@ -190,7 +190,6 @@ button:hover {
 /* Kuva vasemmalle */
 .text-content.img {
     flex: 1;
-    /* Kuva vie osan tilasta */
     max-width: 40%;
     height: auto;
     margin-right: 20px;
@@ -211,14 +210,6 @@ button {
     text-align: center;
     justify-content: space-between;
 }
-
-/* .text-content.img {
-    width: 60%;
-    height: 60%;
-    border-radius: 50%;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
-} */
 
 #image-container {
     width: 40%;
@@ -262,8 +253,8 @@ button {
     }
 
     .kuva {
-        width: 44%;
-        height: 44%;
+        width: 30%;
+        height: auto;
         border-radius: 50%;
         object-fit: cover;
         aspect-ratio: 1 / 1;
@@ -289,7 +280,7 @@ button {
     }
 
     .kuva {
-        width: 30%;
+        width: 25%;
         height: auto;
         border-radius: 50%;
         object-fit: cover;
