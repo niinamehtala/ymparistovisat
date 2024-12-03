@@ -37,6 +37,10 @@ main {
     flex: 1;
 }
 
+p {
+    font-size: 20px;
+}
+
 header {
     display: flex;
     flex-direction: column;
@@ -106,13 +110,13 @@ nav {
 
 .title {
     font-size: 35px;
-    margin-bottom: 30px;
-    text-align: center;
+    margin-bottom: 50px;
+    margin-top: 20px;
 }
 
 .description {
     line-height: 1.5;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .start-btn {
