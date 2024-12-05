@@ -161,7 +161,10 @@ footer {
 
 .view.active {
     display: block;
-    align-items: center
+    align-items: center;
+    text-align: justify;
+    margin: 0 auto;
+    max-width: 500px;
 }
 
 
@@ -186,13 +189,35 @@ button:hover {
     margin-top: 25px;
 }
 
+.results {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.results {
+    background-color: #AFC8AD;
+    /* Kortin tausta */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+}
+
+#result-message {
+    text-align: left;
+    font-size: 30px;
+}
+
 
 /* Kuva vasemmalle */
 .text-content.img {
     flex: 1;
     max-width: 40%;
     height: auto;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 /* Tekstisisältö oikealle */
@@ -200,22 +225,22 @@ button:hover {
 p,
 button {
     flex: 2;
-    text-align: left;
+    text-align: justify;
 }
 
 .text-content {
     width: 100%;
-    max-width: 800px;
+    max-width: 500px;
     margin: 0 auto;
-    text-align: center;
-    justify-content: space-between;
+    text-align: justify;
 }
 
 #image-container {
-    width: 40%;
+    width: 50%;
     height: auto;
     display: block;
-    margin: 10px auto;
+    margin-left: 0;
+    margin-top: 10px;
     border: 2px solid #ccc;
     border-radius: 5px;
 }
@@ -232,6 +257,10 @@ button {
 
 #question-container {
     font-weight: bold;
+}
+
+#price-icon {
+    text-align: center;
 }
 
 
@@ -286,6 +315,12 @@ button {
         object-fit: cover;
         aspect-ratio: 1 / 1;
     }
+
+    .results {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
 }
 
 @media (max-width: 480px) {
@@ -313,5 +348,11 @@ button {
         border-radius: 50%;
         object-fit: cover;
         aspect-ratio: 1 / 1;
+    }
+
+    .results {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
     }
 }

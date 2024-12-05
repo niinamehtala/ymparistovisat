@@ -20,10 +20,10 @@
                 <li class="dropdown">
                     <a href="javascript:void(0)">Pelit</a>
                     <div class="dropdown-content">
-                        <a href="./kasvikisailu.html">Kasvikisa</a>
+                        <a href="./kasvikisailu.html">Kasvikisailu</a>
                         <a href="./luontopoliisi.html">Luontopoliisi</a>
-                        <a href="./ravintotietous.html">Ravintotietoisuus</a>
-                        <a href="./villivisailu.html">Villivisa</a>
+                        <a href="./ravintotietous.html">Ravintotietous</a>
+                        <a href="./villivisailu.html">Villivisailu</a>
                     </div>
             </ul>
         </nav>
@@ -39,9 +39,13 @@
                         voit
                         valita
                         oman vastauksesi
-                        valmiista vaihtoehdoista. Jokaisen kysymyksen jälkeen näet oikean vastauksen. Pelin jälkeen näet
+                        valmiista vaihtoehdoista. Pelin jälkeen näet
                         saamasi
                         pisteet.</p>
+                </div>
+
+                <div>
+                    <img src="../IMG/ravintotietouskuvat/blueberry-2843770_1920.jpg" alt="Mustikan kuva" class="kuva" />
                     <button id="start-button">Aloita visa</button>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="nuoli"
                         viewBox="0 0 16 16">
@@ -49,23 +53,27 @@
                             d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8" />
                     </svg>
                 </div>
-                <img src="../IMG/ravintotietouskuvat/blueberry-2843770_1920.jpg" alt="Mustikan kuva" class="kuva" />
+
             </div>
 
             <!-- Kysymyssivu -->
             <div id="question-view" class="view">
                 <br><br>
                 <div id="question-container"></div>
-                <img id="image-container" alt="Kysymyskuva" />
                 <select id="options-container"></select>
+                <img id="image-container" alt="Kysymyskuva" />
                 <button id="next-button">Seuraava kysymys</button>
             </div>
 
             <!-- Lopputulossivu -->
             <div id="result-view" class="view">
-                <img src="../IMG/ravintotietouskuvat/palkinto.png" alt="palkinto-ikoni" />
-                <h1>Tuloksesi:</h1>
-                <p id="result-message"></p>
+                <h1>Ravintotietous</h1>
+                <div class="results">
+                    <img src="../IMG/ravintotietouskuvat/palkinto.png" alt="palkinto-ikoni" id="price-icon" />
+                    <h1>Tulos:</h1>
+                    <p id="result-message"></p>
+                </div>
+
             </div>
         </article>
     </main>
