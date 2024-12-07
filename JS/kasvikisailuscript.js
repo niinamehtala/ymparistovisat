@@ -11,28 +11,28 @@ startButton.addEventListener('click', () => {
 
 // quiz screen elements
 let questions = [
-    '1. Kysymys',
-    '2. Kysymys',
-    '3. Kysymys',
-    '4. Kysymys',
-    '5. Kysymys',
-    '6. Kysymys',
-    '7. Kysymys',
-    '8. Kysymys',
-    '9. Kysymys',
-    '10. Kysymys'
+    '1. Mikä puu tuottaa pieniä, punaisia marjoja, ja se on yleinen pihan koristekasvi?',
+    '2. Mikä on yhteyttämisen toinen nimitys?',
+    '3. Mikä seuraavista puista tuottaa käpyjä?',
+    '4. Mikä siemenen alkiosta kehittyy?',
+    '5. Mitä on tuulipölytys?',
+    '6. Mikä seuraavista on yksinkertainen tapa tunnistaa havupuu?',
+    '7. Mikä seuraavista on tyypillinen kasvi karuilla kankailla?',
+    '8. Miten kukkakasvit houkuttelevat pölyttäjiä?',
+    '9. Mitä tarkoittaa kasvin talvehtiminen?',
+    '10. Mikä seuraavista on tärkeä ravintokasvi poroille?'
 ]
 let answers = [
-    '1. vastaus',
-    '2. vastaus',
-    '3. vastaus',
-    '4. vastaus',
-    '5. vastaus',
-    '6. vastaus',
-    '7. vastaus',
-    '8. vastaus',
-    '9. vastaus',
-    '10. vastaus'
+    'Pihlaja',
+    'Fotosynteesi',
+    'Mänty',
+    'Taimi',
+    'Siitepölyn siirtymistä tuulen avulla',
+    'Sen lehdet ovat neulasia',
+    'Kanerva',
+    'Tuottamalla värikkäitä kukkia sekä tuoksua ja mettä',
+    'Kasvi menee lepotilaan ja säilyttää ravinteita talven yli',
+    'Jäkälä'
 ]
 
 let points = 0;
