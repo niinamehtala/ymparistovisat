@@ -1,7 +1,3 @@
-
-// quiz screen elements
-let questionTitle = document.querySelector('question-title')
-let result = document.getElementById('result')
 let questions = [
     {
         question: "1. Mikä puu tuottaa pieniä, punaisia marjoja, ja se on yleinen pihan koristekasvi?",
@@ -56,55 +52,119 @@ let questions = [
 ];
 
 let points = 0;
-let index = 0;
+let index =  0;
 
-questionTitle.textContent = questions[index].question
+const questionTitle = document.getElementById('question-title')
+const nextButton = document.getElementById('submit')
 
+const optionsLabels = [
+    document.querySelector('label[for="selection1"]'),
+    document.querySelector('label[for="selection2"]'),
+    document.querySelector('label[for="selection3"]'),
+    document.querySelector('label[for="selection4"]')
+];
+const optionsInputs = [
+    document.getElementById('selection1'),
+    document.getElementById('selection2'),
+    document.getElementById('selection3'),
+    document.getElementById('selection4')
+];
+
+showQuestion()
+
+function showQuestion() {
+    questionTitle.classList.remove('correct', 'incorrect')
+    document.getElementById('result').textContent = ''
+
+    const question = questions[index]
+
+    questionTitle.textContent = question.question
+
+    question.options.forEach((option, i) => {
+        optionsLabels[i].textContent = option // Päivitä label
+        optionsInputs[i].value = option    // Päivitä value
+        optionsInputs[i].checked = false; // Nollaa valinnat
+
+    })
+
+    nextButton.disabled = false
+
+}
 
 
 document.getElementById('question-form').addEventListener('submit', checkAnswer)
 
 
 function checkAnswer(event) {
-    event.preventDefault();
-    let formData = new FormData(event.currentTarget);
 
-    if (formData.get('selection') == quizData[index].answer){
+    nextButton.disabled = true
+
+    event.preventDefault();
+    let formData = new FormData(event.currentTarget)
+
+    if (formData.get('selection') == questions[index].answer) {
         points++
         questionTitle.classList.add('correct')
-    }else {
+    } else {
         questionTitle.classList.add('incorrect')
-
     }
 
-    result.textContent = "Tähän oikea vastaus"
-    nextQuestion()
+    document.getElementById('result').textContent = 
+        "teksti";
 
-    setTimeout(nextQuestion, 1000)
+    index++
+
+    
+   setTimeout(showQuestion,2000)
+    
 
 }
 
-function nextQuestion() {
-    index++;
-    if (index <= questions.length-1) {
-        questionTitle.textContent = questions[index]
-        result.textContent = "";
+// function checkAnswer(event) {
+//     event.preventDefault();
+//     let formData = new FormData(event.currentTarget);
 
-        let inputs = document.querySelectorAll('input[name="selection"]')
-        inputs.forEach(input=> input.checked = false)
-    }
+//     if (formData.get('selection') == quizData[index].answer){
+//         points++
+//         questionTitle.classList.add('correct')
+//     }else {
+//         questionTitle.classList.add('incorrect')
 
-    questionTitle.classList.remove('correct', 'incorrect')
-    document.getElementById('answer').disabled = false
-}
+//     }
 
+//     result.textContent = "Tähän oikea vastaus"
+//     nextQuestion()
 
-// let counter = 0;
+//     setTimeout(nextQuestion, 1000)
 
-// let sessionCounter = sessionStorage.getItem('counter');
-
-// if (sessionCounter) {
-//     counter = Number(sessionCounter);
 // }
+
+// document.getElementById('question-form').addEventListener('submit', (e) => {
+//     e.preventDefault(); // Estä lomakkeen lähetys
+
+//     // Tarkista valinta
+//     const selectedOption = document.querySelector('input[name="selection"]:checked');
+//     if (selectedOption) {
+//         const userAnswer = selectedOption.value;
+//         const correctAnswer = questions[currentIndex].answer;
+
+//         if (userAnswer === correctAnswer) {
+//             alert("Oikein!");
+//         } else {
+//             alert("Väärin!");
+//         }
+
+//         // Siirry seuraavaan kysymykseen
+//         index++;
+//         if (currentIndex < questions.length) {
+//             showQuestion();
+//         } else {
+//             alert("Visailu päättyi!");
+//         }
+//     } else {
+//         alert("Valitse vastaus ennen jatkamista!");
+//     }
+// });
+
 
 
