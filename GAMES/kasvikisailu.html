@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../JS/kasvikisailuscript.js" defer></script>
     <link rel="stylesheet" href="../CSS/kasvikisailustyle.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
     <title>Kasvikisailu</title>
@@ -36,33 +35,11 @@
                             Tervetuloa kasvikisailun pariin! Tässä visassa pääset testaamaan tietämyksesi eri kasveista ja niiden ominaisuuksista.<br>
                             Kisailu koostuu kymmenestä monivalintakysymyksestä. Lue kysymykset huolellisesti ja valitse mielestäsi oikea vastausvaihtoehto.
                             Valittuasi vastauksen, klikkaa "Seuraava"-painiketta siirtyäksesi eteenpäin.<br><br>
-                            Visan loputtua saat selville tuloksen ja kasvitittelisi. Onnea matkaan!
+                            Visan loputtua saat selville tuloksen ja kasvitittelisi. Onnea matkaan!<br>
+                            Huom! Jos olet pelannut peliä aikaisemmin, aloittamalla uuden pelin pisteesi nollautuvat! Pisteet voit tarkistaa Pistetulokset -sivulta.
                         </p>
-                        <button id="start-button" type="start-button" class="start-btn">Aloita visa</button>
+                        <a href="kasvikisailu2.html"><button id="start-button" type="start-button" class="start-btn">Aloita visa</button></a>
                     </div>
-
-                    <!-- Kysymysruutu -->
-                    <div id="quiz-screen" class="hidden">
-                        <h2 class="question-title">Kysymys 1.</h2>
-                        <form id="question-form">
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="selection" id="selection1" value="1">
-                                <label class="form-check-label" for="selection1">Vastaus 1</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="selection" id="selection2" value="2">
-                                <label class="form-check-label" for="selection2">Vastaus 2</label>
-                            </div>
-                            <div class="form-check">
-                                <input class="form-check-input" type="radio" name="selection" id="selection3" value="3">
-                                <label class="form-check-label" for="selection3">Vastaus 3</label>
-                            </div>
-                            <div class="form-check"></div>
-                                <input class="form-check-input" type="radio" name="selection" id="selection4" value="3">
-                                <label class="form-check-label" for="selection4">Vastaus 4</label>
-                            <button id="submit" type="submit" class="next-btn">Seuraava</button>
-                            <p id="result"></p>
-                        </form>
                     </div>
                 </div>
             </div>
