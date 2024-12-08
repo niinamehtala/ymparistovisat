@@ -57,6 +57,32 @@ nav {
     padding: 10px 15px;
 }
 
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #AFC8AD;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #8FAE89;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
 footer {
     padding: 40px;
     background-color: #AFC8AD;
