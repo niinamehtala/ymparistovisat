@@ -61,18 +61,58 @@ nav {
     width: 100%;
 }
 
+.nav-list li {
+    margin: 0 15px;
+    position: relative;
+}
+
 .nav-list li a {
     text-decoration: none;
     color: #333;
     font-weight: bold;
     font-size: 18px;
+    transition: color 0.3s ease;
 }
 
-li {
-    display: inline-block;
+.nav-list li a:hover {
+    color: #666;
 }
 
-.main-title>article {
+.nav-list .dropdown > a::after {
+    content: " ▼";
+    font-size: 0.8em;
+    margin-left: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #AFC8AD;
+    min-width: 160px;
+    z-index: 1;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown-content a {
+    color: #333;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #8FAE89;
+    color: #666;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.main-title > article {
     flex: 5;
     min-height: 70vh;
     display: flex;
@@ -112,19 +152,6 @@ main {
     justify-content: center;
 }
 
-
-@media (max-width: 768px) {
-    .game {
-        max-width: 100%;
-    }
-
-    .main-title h1 {
-        font-size: 2rem;
-    }
-}
-
-
-/* Tästä alaspäin on tyylittelyitä, jotka vaikuttaa yksittäiseen "pelikorttiin" */
 .game {
     background-color: #AFC8AD;
     border: 1px solid #ddd;
@@ -141,7 +168,6 @@ main {
     margin: 10px 0;
 }
 
-
 .game img {
     width: 100%;
     height: auto;
@@ -153,4 +179,14 @@ main {
 .results {
     font-size: 2rem;
     color: #555;
+}
+
+@media (max-width: 768px) {
+    .game {
+        max-width: 100%;
+    }
+
+    .main-title h1 {
+        font-size: 2rem;
+    }
 }
