@@ -54,6 +54,9 @@ let questions = [
 let points = 0;
 let index =  0;
 
+let alertText = document.getElementById('alert')
+let resultText = document.getElementById('result')
+
 const questionTitle = document.getElementById('question-title')
 const nextButton = document.getElementById('submit')
 
@@ -74,6 +77,7 @@ showQuestion()
 
 function showQuestion() {
     questionTitle.classList.remove('correct', 'incorrect')
+
     document.getElementById('result').textContent = ''
 
     const question = questions[index]
@@ -84,6 +88,7 @@ function showQuestion() {
         optionsLabels[i].textContent = option // Päivitä label
         optionsInputs[i].value = option    // Päivitä value
         optionsInputs[i].checked = false; // Nollaa valinnat
+        optionsLabels[i].style.color = "";
 
     })
 
@@ -97,74 +102,52 @@ document.getElementById('question-form').addEventListener('submit', checkAnswer)
 
 function checkAnswer(event) {
 
-    nextButton.disabled = true
-
     event.preventDefault();
-    let formData = new FormData(event.currentTarget)
+    let formdata = new FormData(event.currentTarget)
 
-    if (formData.get('selection') == questions[index].answer) {
-        points++
-        questionTitle.classList.add('correct')
-    } else {
-        questionTitle.classList.add('incorrect')
+    if (!formdata.get('selection')) {
+        alertText.textContent = "ei valittu"
+        alertText.style.color = "red"
+
+        setTimeout(() => {
+            alertText.textContent = "";
+        }, 1000)
+            return
     }
 
-    document.getElementById('result').textContent = 
-        "teksti";
+    if (index < questions.length) {
+        nextButton.disabled = true
 
-    index++
+        if (formdata.get('selection') == questions[index].answer) {
+            points++
+            questionTitle.classList.add('correct')
+            console.log('points++')
 
-    
-   setTimeout(showQuestion,2000)
-    
+            resultText.textContent = "Oikein!"
+            resultText.style.color = "green"
+
+        } else {
+            questionTitle.classList.add('incorrect')
+            console.log('no points')
+
+            resultText.textContent = "Väärin! Oikea vastaus: " + questions[index].answer
+            resultText.style.color = "red"
+        }
+
+        
+
+        index++
+
+        
+        setTimeout(showQuestion,2000)
+    } else {
+        showEndscreen()
+    }
 
 }
 
-// function checkAnswer(event) {
-//     event.preventDefault();
-//     let formData = new FormData(event.currentTarget);
-
-//     if (formData.get('selection') == quizData[index].answer){
-//         points++
-//         questionTitle.classList.add('correct')
-//     }else {
-//         questionTitle.classList.add('incorrect')
-
-//     }
-
-//     result.textContent = "Tähän oikea vastaus"
-//     nextQuestion()
-
-//     setTimeout(nextQuestion, 1000)
-
-// }
-
-// document.getElementById('question-form').addEventListener('submit', (e) => {
-//     e.preventDefault(); // Estä lomakkeen lähetys
-
-//     // Tarkista valinta
-//     const selectedOption = document.querySelector('input[name="selection"]:checked');
-//     if (selectedOption) {
-//         const userAnswer = selectedOption.value;
-//         const correctAnswer = questions[currentIndex].answer;
-
-//         if (userAnswer === correctAnswer) {
-//             alert("Oikein!");
-//         } else {
-//             alert("Väärin!");
-//         }
-
-//         // Siirry seuraavaan kysymykseen
-//         index++;
-//         if (currentIndex < questions.length) {
-//             showQuestion();
-//         } else {
-//             alert("Visailu päättyi!");
-//         }
-//     } else {
-//         alert("Valitse vastaus ennen jatkamista!");
-//     }
-// });
-
+function addPoints() {
+    sessionStorage.setItem('kasvikisailuScore', points.toString())
+}
 
 
