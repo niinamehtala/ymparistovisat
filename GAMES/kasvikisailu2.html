@@ -31,7 +31,7 @@
             <div class="row">
                 <!-- Vasemman puolen kuva -->
                 <div class="col-md-5 image-container">
-                    <img src="../../IMG/kasvikisailukuvat/kasvikisailu.png" alt="kasvikisailulogo, vihreä teksti jonka vieressä vaaleanpunainen kukka ja vihreä lehti" class="kasvikisailulogo">
+                    <img src="../IMG/kasvikisailukuvat/kasvikisailu.png" alt="kasvikisailulogo, vihreä teksti jonka vieressä vaaleanpunainen kukka ja vihreä lehti" class="kasvikisailulogo">
                 </div>
 
                 <!-- Oikean puolen sisältö -->
@@ -61,10 +61,11 @@
                             <button id="submit" type="submit" class="next-btn">Seuraava</button>
                         </form>
                     </div>
-                    <div id="end-screen" class="hidden">
-                        <h2>Kiitos pelaamisesta!</h2>
-                        <!-- <p>Sait <span id="score"></span> pistettä!</p>
-                        <button id="restart-button" class="btn btn-primary">Pelaa uudelleen</button> -->
+                    <div id="result-screen" class="d-none">
+                        <div id="result-content">
+                            <h1>Peli päättyi! Tuloksesi: <br>
+                            <span id=userScore></span> / <span id=maxScore></span></h1>
+                        </div>
                     </div>
                 </div>
             </div>

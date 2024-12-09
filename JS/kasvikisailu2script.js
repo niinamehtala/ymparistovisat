@@ -6,22 +6,22 @@ let questions = [
         answer: "Pihlaja"
     },
     {
-        question: "2. Mikä on yhteyttämisen toinen nimitys?",
+        question: "2. Millä toisella nimellä yhteyttämistä usein kutsutaan?",
         options: ["Kasvukierto", "Fotosynteesi", "Haihtuminen", "Lehtivihreä"],
         answer: "Fotosynteesi"
     },
     {
-        question: "3. Mikä seuraavista puista tuottaa käpyjä?",
+        question: "3. Mikä seuraavista puulajeista tuottaa käpyjä?",
         options: ["Koivu", "Mänty", "Pihlaja", "Vaahtera"],
         answer: "Mänty"
     },
     {
-        question: "4. Mikä siemenen alkiosta kehittyy?",
+        question: "4. Millä nimellä kutsutaan nuorta kasvia, joka kehittyy siemenen alkiosta?",
         options: ["Kukka", "Hedelmä", "Taimi", "Juuri"],
         answer: "Taimi"
     },
     {
-        question: "5. Mitä on tuulipölytys?",
+        question: "5. Mitä tarkoitetaan, kun puhutaan tuulipölytyksestä?",
         options: ["Siementen kulkeutumista tuulen mukana", "Siitepölyn siirtymistä tuulen avulla", "Kasvin siirtymistä tuulen mukana", "Lehden irtoamista tuulessa"],
         answer: "Siitepölyn siirtymistä tuulen avulla"
     },
@@ -41,7 +41,7 @@ let questions = [
         answer: "Tuottamalla värikkäitä kukkia sekä tuoksua ja mettä"
     },
     {
-        question: "9. Mitä tarkoittaa kasvin talvehtiminen?",
+        question: "9. Mitä tarkoitetaan kasvin talvehtimisella?",
         options: ["Kasvi menee lepotilaan ja säilyttää ravinteita talven yli", "Kasvi kuolee joka talvi ja kasvaa uudelleen keväällä", "Kasvi kasvattaa uusia siemeniä talvella", "Kasvi muuttuu täysin ruskeaksi kylmällä säällä"],
         answer: "Kasvi menee lepotilaan ja säilyttää ravinteita talven yli"
     },
@@ -94,11 +94,12 @@ function showQuestion() {
         optionsLabels[i].textContent = option
         optionsInputs[i].value = option
         optionsInputs[i].checked = false; 
-        optionsLabels[i].style.color = "";
+        optionsLabels[i].style = false;
 
     })
     // allow to click next button
     nextButton.disabled = false
+    nextButton.classList.remove('button-disabled')
 
 }
 
@@ -123,35 +124,41 @@ function checkAnswer(event) {
     }
 
     nextButton.disabled = true
+    nextButton.classList.add('button-disabled')
+    
+    
+    const correctInputId = optionsInputs.find(input => input.value === questions[index].answer).id;
+    const correctLabel = document.querySelector(`label[for="${correctInputId}"]`);
+    correctLabel.style.color = "green";
+    correctLabel.style.fontWeight = "bold";
 
     if (formdata.get('selection') == questions[index].answer) {
         points++
-        questionTitle.classList.add('correct')
         console.log('points++')
 
         resultText.textContent = "Oikein!"
         resultText.style.color = "green"
 
     } else {
-        questionTitle.classList.add('incorrect')
+        const selectedInputId = optionsInputs.find(input => input.checked).id;
+        const incorrectLabel = document.querySelector(`label[for="${selectedInputId}"]`);
+        incorrectLabel.style.color = "red";
+        incorrectLabel.style.fontWeight = "bold";
+
         console.log('no points')
 
-        resultText.textContent = "Väärin! Oikea vastaus: " + questions[index].answer
+        resultText.textContent = "Väärin meni! Oikea vastaus: " + questions[index].answer
         resultText.style.color = "red"
     }
 
-    
     index++
         
-
-    console.log(index)
-
     if (index <= questions.length-1) {
-        setTimeout(showQuestion,2000)
+        setTimeout(showQuestion,2500)
     } else {
         console.log("else")
         addPoints()
-        setTimeout(showEndScreen, 2000)
+        setTimeout(showResultScreen, 2500)
     }
 
 }
@@ -162,11 +169,18 @@ function addPoints() {
     sessionStorage.setItem('kasvikisailuMaxScore', questions.length.toString())
 }
 
-function showEndScreen() {
+function showResultScreen() {
+    const quizScreen = document.getElementById('quiz-screen')
+    const resultScreen = document.getElementById('result-screen')
     const totalQuestions = questions.length;
-    console.log(totalQuestions)
 
-    window.location.href = `../GAMES/kasvikisailu3.html`
+    quizScreen.classList.add("d-none");
+    resultScreen.classList.remove("d-none");
+
+    document.getElementById('userScore').textContent = points
+    document.getElementById('maxScore').textContent = questions.length
+
+
 }
 
 

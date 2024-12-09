@@ -130,10 +130,6 @@ nav {
     justify-content: center;
 }
 
-/* #start-screen {
-    
-} */
-
 .title {
     font-size: 35px;
     margin-bottom: 50px;
@@ -143,6 +139,15 @@ nav {
 .description {
     line-height: 1.5;
     margin-bottom: 40px;
+}
+
+form {
+    margin-top: 20px;
+}
+
+.form-check {
+    margin-left: 15px;
+    margin-bottom: 2px;
 }
 
 .start-btn {
@@ -209,6 +214,21 @@ button {
 }
 button:hover {
     background-color: #3c614a;
+}
+
+#result, #alert {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    font-size: 16px;
+    font-style: italic;
+}
+
+
+
+.button-disabled {
+    opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .hidden {
