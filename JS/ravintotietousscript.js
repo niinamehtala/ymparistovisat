@@ -92,6 +92,12 @@ function nextQuestion() {
     showQuestion();
 }
 
+//Tallennetaan sessionStorageen:
+function saveScoreToSession(score) {
+    sessionStorage.setItem("RavintotietousScore", score);
+}
+
+
 //Näytetään tulokset:
 function showResults() {
     const introView = document.getElementById("intro");
@@ -102,9 +108,13 @@ function showResults() {
     questionView.classList.remove("active");
     resultView.classList.add("active");
 
+    // Näytetään tulosviesti käyttäjän pistemäärän perusteella
     if (correctAnswers >= 8) {
         resultMessage.textContent = `Hienoa! Sait ${correctAnswers}/${questions.length} pistettä!`;
     } else {
         resultMessage.textContent = `Sait ${correctAnswers}/${questions.length} pistettä.`;
     }
+
+    // Tallennetaan pisteet sessionStorageen
+    saveScoreToSession(correctAnswers);
 }
