@@ -1,12 +1,5 @@
 //Elementit:
-/* const villivisailuScore = sessionStorage.getItem("villivisailuScore");
-
-const luontopoliisiScore = sessionStorage.getItem("luontopoliisiScore");
-
-const kasvikisailuScore = sessionStorage.getItem("kasvikisailuScore");
-
-const ravintotietousScore = sessionStorage.getItem("ravintotietousScore");*/
-
+//Muutetaan tulos numeroksi ja tulos on 0 jos peliä ei ole pelattu.
 const ravintotietousScore = parseInt(sessionStorage.getItem("ravintotietousScore")) || 0;
 const kasvikisailuScore = parseInt(sessionStorage.getItem("kasvikisailuScore")) || 0;
 const luontopoliisiScore = parseInt(sessionStorage.getItem("luontopoliisiScore")) || 0;
@@ -27,7 +20,7 @@ if (ravintotietousScore !== null) {
 
 //Yhteispisteet:
 if (totalScore > 0) {
-    totalScoreElement.textContent = `Tulos: ${totalScore}/40 pistettä`;
+    totalScoreElement.textContent = `Yhteensä: ${totalScore}/40 pistettä`;
 } else {
     totalScoreElement.textContent = `Ei yhteispisteitä.`;
 }
