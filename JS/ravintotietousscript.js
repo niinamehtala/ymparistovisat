@@ -3,7 +3,7 @@
 //2.Elementit ja kuuntelijat
 //3.Funktiot
 
-//Tiedot haetaan staattisesti JSON-tiedostosta
+//Tiedot haetaan JSON-tiedostosta
 import questions from '../DATA/questions.json' with { type: "json" };
 
 //1.Muuttujat:.
@@ -50,17 +50,19 @@ nextButton.addEventListener("click", () => {
         } else {
             resultMessage.textContent = `Sait ${correctAnswers}/${questions.length} pistettä.`;
         }
+        saveScoreToSession(correctAnswers);
     }
+
 });
 
 //3.Funktiot:
-// Näytä tietty näkymä ja piilota muut
+// Näytetään tietty näkymä ja piilotetaan muut
 function showView(view) {
     document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
     view.classList.add("active");
 }
 
-// Näytä aloitussivu ensimmäisenä
+// Näytetään aloitussivu ensimmäisenä
 showView(introView);
 
 //Yksi kysymys kerrallaan näkyvillä
@@ -79,42 +81,8 @@ function showQuestion() {
     });
 }
 
-//Nappia painamalla siirrytään seuraavaan kysymykseen ja jos oikein, niin lisää oikein vastattujen määrää yhdellä
-function nextQuestion() {
-    const selectedAnswer = optionsContainer.value;
-    const correctAnswer = questions[currentQuestionIndex].correct;
 
-    if (selectedAnswer === correctAnswer) {
-        correctAnswers++;
-    }
-
-    currentQuestionIndex++;
-    showQuestion();
-}
-
-//Tallennetaan sessionStorageen:
-function saveScoreToSession(score) {
-    sessionStorage.setItem("RavintotietousScore", score);
-}
-
-
-//Näytetään tulokset:
-function showResults() {
-    const introView = document.getElementById("intro");
-    const questionView = document.getElementById("question-view");
-    const resultView = document.getElementById("result-view");
-
-    introView.classList.remove("active");
-    questionView.classList.remove("active");
-    resultView.classList.add("active");
-
-    // Näytetään tulosviesti käyttäjän pistemäärän perusteella
-    if (correctAnswers >= 8) {
-        resultMessage.textContent = `Hienoa! Sait ${correctAnswers}/${questions.length} pistettä!`;
-    } else {
-        resultMessage.textContent = `Sait ${correctAnswers}/${questions.length} pistettä.`;
-    }
-
-    // Tallennetaan pisteet sessionStorageen
-    saveScoreToSession(correctAnswers);
+//Tallennetaan pisteet sessionStorageen:
+function saveScoreToSession(value) {
+    sessionStorage.setItem("ravintotietousScore", value);
 }
