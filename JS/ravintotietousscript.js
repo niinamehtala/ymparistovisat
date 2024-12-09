@@ -56,13 +56,13 @@ nextButton.addEventListener("click", () => {
 });
 
 //3.Funktiot:
-// Näytetään tietty näkymä ja piilotetaan muut
+// Näytä tietty näkymä ja piilota muut
 function showView(view) {
     document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
     view.classList.add("active");
 }
 
-// Näytetään aloitussivu ensimmäisenä
+// Näytä aloitussivu ensimmäisenä
 showView(introView);
 
 //Yksi kysymys kerrallaan näkyvillä
