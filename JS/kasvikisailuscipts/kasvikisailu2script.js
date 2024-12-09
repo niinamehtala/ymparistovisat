@@ -159,13 +159,14 @@ function checkAnswer(event) {
 // add points to sessionStorage
 function addPoints() {
     sessionStorage.setItem('kasvikisailuScore', points.toString())
+    sessionStorage.setItem('kasvikisailuMaxScore', questions.length.toString())
 }
 
 function showEndScreen() {
     const totalQuestions = questions.length;
     console.log(totalQuestions)
 
-    window.location.href = `../GAMES/kasvikisailu3.html?score=${points}&total=${totalQuestions}`;
+    window.location.href = `../GAMES/kasvikisailu3.html`
 }
 
 
