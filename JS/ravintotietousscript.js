@@ -1,13 +1,12 @@
-///Järjestys kannattaa olla näin js:ssä:
+//Tämän js-tiedoston järjestys:
 //1.Muuttujat
 //2.Elementit ja kuuntelijat
 //3.Funktiot
 
-//Tiedot haetaan staattisesti
+//Tiedot haetaan staattisesti JSON-tiedostosta
 import questions from '../DATA/questions.json' with { type: "json" };
 
 //1.Muuttujat:.
-// let questions = [];
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 
@@ -46,28 +45,15 @@ nextButton.addEventListener("click", () => {
         showQuestion();
     } else {
         showView(resultView);
-        resultMessage.textContent = `Sait ${correctAnswers}/${questions.length} pistettä!`;
+        if (correctAnswers >= 8) {
+            resultMessage.textContent = `Hienoa! Sait ${correctAnswers}/${questions.length} pistettä!`;
+        } else {
+            resultMessage.textContent = `Sait ${correctAnswers}/${questions.length} pistettä.`;
+        }
     }
 });
 
-// addEventListener("DOMContentLoaded", () => {
-//     loadQuestions()
-// })
-
-
 //3.Funktiot:
-//Kysymysten lataus:
-// async function loadQuestions() {
-//     try {
-//         console.log("heippa");
-//         const response = await fetch("../DATA/questions.json");
-//         questions = await response.json();
-//         console.log("Kysymykset ladattu:", questions);
-//     } catch (error) {
-//         console.error("Kysymysten lataus epäonnistui:", error);
-//     }
-// }
-
 // Näytä tietty näkymä ja piilota muut
 function showView(view) {
     document.querySelectorAll(".view").forEach(v => v.classList.remove("active"));
@@ -116,13 +102,9 @@ function showResults() {
     questionView.classList.remove("active");
     resultView.classList.add("active");
 
-    resultMessage.textContent = `Sait ${correctAnswers}/${questions.length} pistettä!`;
+    if (correctAnswers >= 8) {
+        resultMessage.textContent = `Hienoa! Sait ${correctAnswers}/${questions.length} pistettä!`;
+    } else {
+        resultMessage.textContent = `Sait ${correctAnswers}/${questions.length} pistettä.`;
+    }
 }
-
-
-// //Testi, latautuuko kysymykset
-// console.log("Yritetään ladata tiedostoa ../DATA/questions.json");
-
-// if (questions.length === 0) {
-//     console.error("Kysymyksiä ei ladattu! Tarkista JSON-tiedoston polku tai sisältö.");
-// }
