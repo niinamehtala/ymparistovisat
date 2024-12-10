@@ -18,10 +18,10 @@
                 <li class="dropdown">
                     <a href="javascript:void(0)">Pelit</a>
                     <div class="dropdown-content">
-                        <a href="./kasvikisailu.html">Kasvikisailu</a>
-                        <a href="./luontopoliisi.html">Luontopoliisi</a>
-                        <a href="./ravintotietous.html">Ravintotietous</a>
-                        <a href="./villivisailu.html">Villivisailu</a>
+                        <a href="kasvikisailu.html">Kasvikisailu</a>
+                        <a href="luontopoliisi.html">Luontopoliisi</a>
+                        <a href="ravintotietous.html">Ravintotietous</a>
+                        <a href="villivisailu.html">Villivisailu</a>
                     </div>
             </ul>
         </nav>
@@ -30,7 +30,7 @@
         <div class="container main-container">
             <div class="row">
                 <!-- Vasemman puolen kuva -->
-                <div class="col-md-5 image-container">
+                <div class="col-md-5 image-container" id="col-md-5 img cont">
                     <img src="../IMG/kasvikisailukuvat/kasvikisailu.png" alt="kasvikisailulogo, vihreä teksti jonka vieressä vaaleanpunainen kukka ja vihreä lehti" class="kasvikisailulogo">
                 </div>
 
@@ -63,8 +63,17 @@
                     </div>
                     <div id="result-screen" class="d-none">
                         <div id="result-content">
-                            <h1>Peli päättyi! Tuloksesi: <br>
-                            <span id=userScore></span> / <span id=maxScore></span></h1>
+                            <h2>Peli päättyi!<br></h2>
+                            <div id="score-div">
+                                <p>Tulos:</p> 
+                                <h2><span id=userScore></span> / <span id=maxScore></span></h2>
+                                <p>Kasvititteli:</p>
+                                <p><span id="userScoreName"></span></p>
+                            </div>
+                            <div class="result-screen-buttons">
+                            <button id="start-again" class="resultButtons">Aloita alusta</button>
+                            <button id="see-results" class="resultButtons">Pelitulokset</button>
+                            </div>
                         </div>
                     </div>
                 </div>

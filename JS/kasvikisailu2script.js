@@ -55,6 +55,8 @@ let questions = [
 let points = 0;
 let index =  0;
 
+console.log("Game starts: points: " + points + "index: " + index) // poista
+
 let alertText = document.getElementById('alert')
 let resultText = document.getElementById('result')
 
@@ -75,8 +77,6 @@ const optionsInputs = [
 ];
 
 showQuestion()
-console.log(questions.length, index)
-
 
 function showQuestion() {
 
@@ -154,11 +154,10 @@ function checkAnswer(event) {
     index++
         
     if (index <= questions.length-1) {
-        setTimeout(showQuestion,2500)
+        setTimeout(showQuestion,3000)
     } else {
-        console.log("else")
         addPoints()
-        setTimeout(showResultScreen, 2500)
+        setTimeout(showResultScreen, 3000)
     }
 
 }
@@ -173,6 +172,7 @@ function showResultScreen() {
     const quizScreen = document.getElementById('quiz-screen')
     const resultScreen = document.getElementById('result-screen')
     const totalQuestions = questions.length;
+    const buttonStartAgain = document.getElementById('start-again')
 
     quizScreen.classList.add("d-none");
     resultScreen.classList.remove("d-none");
@@ -180,7 +180,44 @@ function showResultScreen() {
     document.getElementById('userScore').textContent = points
     document.getElementById('maxScore').textContent = questions.length
 
+    let scoreName = document.getElementById('userScoreName')
+    
+    if (points <= 3) {
+        scoreName.textContent = "Kasvinoviisi"
+    } else if (3 < points <= 6) {
+        scoreName.textContent = "Kasviharrastelija"
+    } else if (6 < points <= 9) {
+        scoreName.textContent = "Kasvitietäjä"
+    } else if (points == 10) {
+        scoreName.textContent = "Kasvikuningas"
+    }
+
+    console.log("Game OK,result screen: index: " + index + "points:" + points)
+
+    document.getElementById('start-again').addEventListener('click', () => {
+        if (window.confirm("Haluatko varmasti aloittaa alusta? Menetät kaikki tähän asti ansaitut pisteet.")) {
+            // Käyttäjä vahvisti toiminnon
+            points = 0;
+            index = 0;
+            // sessionStorage.clear(); // Tyhjennetään aiemmat pistetiedot
+            //TÄYTYY POISTAA VAIN OMAN PELIN PISTEET
+    
+            // Näytetään quiz-näkymä ja piilotetaan muut
+            document.getElementById('quiz-screen').classList.remove('d-none');
+            document.getElementById('result-screen').classList.add('d-none');
+    
+            // Ladataan ensimmäinen kysymys uudelleen
+            showQuestion();
+        } else {
+            // Käyttäjä peruutti toiminnon, ei tehdä mitään
+            console.log("Käyttäjä peruutti aloituksen alusta.");
+        }
+    });
+
 
 }
+
+
+
 
 
