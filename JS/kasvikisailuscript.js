@@ -2,21 +2,21 @@ const previousResultsText = document.getElementById('previous-results')
 const previousScore = sessionStorage.getItem('kasvikisailuScore')
 const previousMaxScore = sessionStorage.getItem('kasvikisailuMaxScore')
 
+// show score if game has been played before
 if (previousScore) {
     previousResultsText.textContent = "Pisteesi: " + previousScore + " / " + previousMaxScore
-    console.log("previous score found") // poista
 } else {
     previousResultsText.textContent = ''
 }
 
-
+// start game, if played before ask user to confirm
 document.getElementById('start-button').addEventListener('click', () => {
+
     if (previousScore) {
-        if (window.confirm("Haluatko varmasti aloittaa alusta? Menetät kaikki tähän asti ansaitut pisteet.")) {
+        if (window.confirm("Haluatko varmasti aloittaa uuden pelin? Nykyinen pistetuloksesi nollataan.")) {
             window.location.href = "kasvikisailu2.html"
-        } else {
-            console.log ("user declined") // poista
         }
+
     } else {
         window.location.href = "kasvikisailu2.html"
     }

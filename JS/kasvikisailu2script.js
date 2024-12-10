@@ -55,8 +55,6 @@ let questions = [
 let points = 0;
 let index =  0;
 
-console.log("Game starts: points: " + points + "index: " + index) // poista
-
 let alertText = document.getElementById('alert')
 let resultText = document.getElementById('result')
 
@@ -78,18 +76,17 @@ const optionsInputs = [
 
 showQuestion()
 
+// update and show the question and answer options
 function showQuestion() {
 
     questionTitle.classList.remove('correct', 'incorrect')
 
-    //delete result text
     document.getElementById('result').textContent = ''
 
     const currentQuestion = questions[index]
 
     questionTitle.textContent = questions[index].question
 
-    // update the option's label, value, selection and style
     currentQuestion.options.forEach((option, i) => {
         optionsLabels[i].textContent = option
         optionsInputs[i].value = option
@@ -97,13 +94,13 @@ function showQuestion() {
         optionsLabels[i].style = false;
 
     })
-    // allow to click next button
+  
     nextButton.disabled = false
     nextButton.classList.remove('button-disabled')
 
 }
 
-
+// click next -button to check the answer and move on to the next question
 document.getElementById('question-form').addEventListener('submit', checkAnswer)
 
 
@@ -112,7 +109,7 @@ function checkAnswer(event) {
     event.preventDefault();
     let formdata = new FormData(event.currentTarget)
 
-    // alert if no option checked
+    // inform if no option checked
     if (!formdata.get('selection')) {
         alertText.textContent = "Valitse vastaus jatkaaksesi"
         alertText.style.color = "red"
@@ -133,6 +130,7 @@ function checkAnswer(event) {
     correctLabel.style.color = "green";
     correctLabel.style.fontWeight = "bold";
 
+    //check answer, inform user and add points
     if (formdata.get('selection') == questions[index].answer) {
         points++
         console.log('points++')
@@ -154,6 +152,7 @@ function checkAnswer(event) {
         resultText.style.fontSize = '1.2em'
     }
 
+    // add index, check if new question or result screen
     index++
         
     if (index <= questions.length-1) {
@@ -171,6 +170,7 @@ function addPoints() {
     sessionStorage.setItem('kasvikisailuMaxScore', questions.length.toString())
 }
 
+// show results and "kasvititteli" based on results
 function showResultScreen() {
     const quizScreen = document.getElementById('quiz-screen')
     const resultScreen = document.getElementById('result-screen')
@@ -195,25 +195,16 @@ function showResultScreen() {
         scoreName.textContent = "Kasvikuningas"
     }
 
-    console.log("Game OK,result screen: index: " + index + "points:" + points)
-
+    // start again -button for new game, ask user to confirm
     document.getElementById('start-again').addEventListener('click', () => {
         if (window.confirm("Haluatko varmasti aloittaa alusta? Menetät kaikki tähän asti ansaitut pisteet.")) {
-            // Käyttäjä vahvisti toiminnon
             points = 0;
             index = 0;
-            // sessionStorage.clear(); // Tyhjennetään aiemmat pistetiedot
-            //TÄYTYY POISTAA VAIN OMAN PELIN PISTEET
     
-            // Näytetään quiz-näkymä ja piilotetaan muut
             document.getElementById('quiz-screen').classList.remove('d-none');
             document.getElementById('result-screen').classList.add('d-none');
     
-            // Ladataan ensimmäinen kysymys uudelleen
             showQuestion();
-        } else {
-            // Käyttäjä peruutti toiminnon, ei tehdä mitään
-            console.log("Käyttäjä peruutti aloituksen alusta.");
         }
     });
 
