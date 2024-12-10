@@ -133,7 +133,6 @@ function checkAnswer(event) {
     //check answer, inform user and add points
     if (formdata.get('selection') == questions[index].answer) {
         points++
-        console.log('points++')
 
         resultText.textContent = "Oikein!"
         resultText.style.color = "green"
@@ -144,8 +143,6 @@ function checkAnswer(event) {
         const incorrectLabel = document.querySelector(`label[for="${selectedInputId}"]`);
         incorrectLabel.style.color = "red";
         incorrectLabel.style.fontWeight = "bold";
-
-        console.log('no points')
 
         resultText.textContent = "Väärin meni! Oikea vastaus: " + questions[index].answer
         resultText.style.color = "red"
@@ -159,7 +156,7 @@ function checkAnswer(event) {
         setTimeout(showQuestion,3000)
     } else {
         addPoints()
-        setTimeout(showResultScreen, 3000)
+        setTimeout(showResultScreen,3000)
     }
 
 }
