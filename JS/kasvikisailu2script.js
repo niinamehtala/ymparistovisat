@@ -114,8 +114,9 @@ function checkAnswer(event) {
 
     // alert if no option checked
     if (!formdata.get('selection')) {
-        alertText.textContent = "ei valittu"
+        alertText.textContent = "Valitse vastaus jatkaaksesi"
         alertText.style.color = "red"
+        alertText.style.fontSize = '1.2em'
 
         setTimeout(() => {
             alertText.textContent = "";
@@ -138,6 +139,7 @@ function checkAnswer(event) {
 
         resultText.textContent = "Oikein!"
         resultText.style.color = "green"
+        resultText.style.fontSize = '1.2em'
 
     } else {
         const selectedInputId = optionsInputs.find(input => input.checked).id;
@@ -149,6 +151,7 @@ function checkAnswer(event) {
 
         resultText.textContent = "Väärin meni! Oikea vastaus: " + questions[index].answer
         resultText.style.color = "red"
+        resultText.style.fontSize = '1.2em'
     }
 
     index++

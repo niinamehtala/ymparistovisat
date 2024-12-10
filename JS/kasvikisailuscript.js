@@ -9,6 +9,7 @@ if (previousScore) {
     previousResultsText.textContent = ''
 }
 
+
 document.getElementById('start-button').addEventListener('click', () => {
     if (previousScore) {
         if (window.confirm("Haluatko varmasti aloittaa alusta? Menetät kaikki tähän asti ansaitut pisteet.")) {
