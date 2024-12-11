@@ -6,9 +6,9 @@ const luontopoliisiScore = parseInt(sessionStorage.getItem("luontopoliisiScore")
 const villivisailuScore = parseInt(sessionStorage.getItem("villivisailuScore")) || 0;
 
 const ravintotietousresultsElement = document.getElementById("ravintotietous-results");
-const villivisailuresultsElement = document.getElementById("ravintotietous-results");
-const luontopoliisiresultsElement = document.getElementById("ravintotietous-results");
-const kasvikisailuresultsElement = document.getElementById("ravintotietous-results");
+const villivisailuresultsElement = document.getElementById("villivisailu-results");
+const luontopoliisiresultsElement = document.getElementById("luontopoliisi-results");
+const kasvikisailuresultsElement = document.getElementById("kasvikisailu-results");
 
 const totalScore = ravintotietousScore + kasvikisailuScore + luontopoliisiScore + villivisailuScore;
 const totalScoreElement = document.getElementById("total-score");
