@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../CSS/luontopoliisistyle.css">
+    <title>Luontopoliisi</title>
+    <style>
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 2em;
+        }
+
+        .game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 20px;
+        }
+
+        .trash-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .game-image {
+            max-width: 200px;
+            max-height: 200px;
+            margin: 10px 0;
+        }
+
+        .bins-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .bins-container button {
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+
+        .bins-container img {
+            width: 120px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .bins-container img:hover {
+            transform: scale(1.2);
+        }
+
+        .result {
+            text-align: center;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+    </style>
+    <script>
+        const trashItems = [
+            { image: "../../IMG/luontopoliisikuvat/lasirikki.png", correctBin: "lasi" },
+            { image: "../../IMG/luontopoliisikuvat/muovipullo.png", correctBin: "muovi" },
+            { image: "../../IMG/luontopoliisikuvat/ruoka.png", correctBin: "biojate" },
+            { image: "../../IMG/luontopoliisikuvat/uutislehti.png", correctBin: "paperi" },
+        ];
+
+        let currentIndex = 0;
+        let score = 0;
+
+        function loadTrashItem() {
+            const trashImage = document.getElementById("trash-image");
+            trashImage.src = trashItems[currentIndex].image;
+            trashImage.alt = "Roska";
+        }
+
+        function checkAnswer(selectedBin) {
+            const result = document.getElementById("result");
+            if (trashItems[currentIndex].correctBin === selectedBin) {
+                result.textContent = "Oikein!";
+                result.style.color = "green";
+                score++;
+            } else {
+                result.textContent = "Väärin!";
+                result.style.color = "red";
+            }
+
+            setTimeout(() => {
+                currentIndex++;
+                if (currentIndex < trashItems.length) {
+                    loadTrashItem();
+                    result.textContent = "";
+                } else {
+                    const url = `./luontopoliisi3.html?score=${score}`;
+                    window.location.href = url;
+                }
+            }, 1000);
+        }
+
+        window.onload = loadTrashItem;
+    </script>
+</head>
+<body>
+    <header>
+        <img src="../../IMG/yleisetkuvat/logo_visaan.png" alt="logo" class="logo">
+        <nav>
+            <ul class="nav-list">
+                <li><a href="../../index.html">Etusivu</a></li>
+                <li><a href="../../info.html">Info</a></li>
+                <li class="dropdown">
+                    <a href="javascript:void(0)">Pelit</a>
+                    <div class="dropdown-content">
+                        <a href="../kasvikisailu.html">Kasvikisailu</a>
+                        <a href="./luontopoliisi.html">Luontopoliisi</a>
+                        <a href="../ravintotietous.html">Ravintotietous</a>
+                        <a href="../villivisailu.html">Villivisailu</a>
+                        <a href="../koostesivu.html">Tulokset</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Mihin jäteastiaan kuvan roska kuuluu?</h1>
+
+        <div class="game-container">
+            <div class="trash-container">
+                <img id="trash-image" src="" alt="Roska" class="game-image">
+            </div>
+
+            <div class="bins-container">
+                <button onclick="checkAnswer('biojate')">
+                    <img src="../../IMG/luontopoliisikuvat/biojate.png" alt="Biojäte">
+                </button>
+                <button onclick="checkAnswer('lasi')">
+                    <img src="../../IMG/luontopoliisikuvat/lasi.png" alt="Lasi">
+                </button>
+                <button onclick="checkAnswer('muovi')">
+                    <img src="../../IMG/luontopoliisikuvat/muovi.png" alt="Muovi">
+                </button>
+                <button onclick="checkAnswer('paperi')">
+                    <img src="../../IMG/luontopoliisikuvat/paperi.png" alt="Paperi">
+                </button>
+            </div>
+
+            <p id="result" class="result"></p>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            OAMK, Web-projekti 2024, Ryhmä 3: Niina Mehtälä, Henna Orava, Rosa-Liina Vihelä, Nepu Kontio
+        </div>
+    </footer>
+</body>
+</html>
