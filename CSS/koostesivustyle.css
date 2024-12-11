@@ -181,12 +181,46 @@ main {
     color: #555;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1410px) {
+
+    .logo {
+        width: 60%;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 791px) {
     .game {
         max-width: 100%;
     }
 
     .main-title h1 {
         font-size: 2rem;
+    }
+
+    .logo {
+        width: 50%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        width: 80%;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        margin: 0 auto;
     }
 }

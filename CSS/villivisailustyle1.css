@@ -5,14 +5,22 @@
 html {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
+    font-size: 18px;
 }
 
 body {
     display: flex;
     flex-direction: column;
-    min-height: 116vh;
+    min-height: 120vh;
     margin: 0;
     background-color: #F2F1EB;
+}
+
+header,
+footer,
+article,
+nav {
+    padding: 1em;
 }
 
 .col-1 {
@@ -21,22 +29,28 @@ body {
     flex: 5;
 }
 
-header, footer {
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    background-color: #AFC8AD;
+    justify-content: center;
+}
+
+footer {
     background-color: #AFC8AD;
     text-align: center;
     padding: 10px;
 }
 
 .logo {
-    margin-bottom: 10px;
+    width: 30%;
     height: auto;
 }
 
 nav {
-    width: 100%;
-    padding: 1em;
-    display: flex;
-    justify-content: center;
+    width: 70%;
 }
 
 .nav-list {
@@ -44,9 +58,13 @@ nav {
     display: flex;
     justify-content: space-between;
     padding: 0;
-    margin: 0 auto;
-    max-width: 800px;
+    margin: 0;
     width: 100%;
+}
+
+.nav-list li {
+    margin: 0 15px;
+    position: relative;
 }
 
 .nav-list li a {
@@ -54,7 +72,17 @@ nav {
     color: #333;
     font-weight: bold;
     font-size: 18px;
-    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.nav-list li a:hover {
+    color: #666;
+}
+
+.nav-list .dropdown > a::after {
+    content: " ▼";
+    font-size: 0.8em;
+    margin-left: 5px;
 }
 
 .dropdown-content {
@@ -73,10 +101,12 @@ nav {
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    transition: color 0.3s ease, background-color 0.3s ease;
 }
 
 .dropdown-content a:hover {
     background-color: #8FAE89;
+    color: #666;
 }
 
 .dropdown:hover .dropdown-content {
@@ -159,6 +189,16 @@ main {
     font-size: 1rem;
 }
 
+@media (max-width: 1410px) {
+
+    .logo {
+        width: 60%;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 1182px) {
 
     .main-content {
@@ -181,11 +221,30 @@ main {
         margin-right: 40px;
         margin-bottom: 40px;
     }
+}
+
+@media (max-width: 791px) {
+    .logo {
+        width: 50%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
 
     .logo {
-        width: 400%;
+        width: 80%;
+        max-width: 280px;
         height: auto;
-        max-width: 312px;
-    }    
+        margin: 0 auto;
+    }
 
+    nav {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        margin: 0 auto;
+    }
 }

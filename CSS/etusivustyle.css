@@ -200,9 +200,16 @@ footer {
         text-align: left;
         max-width: 90%;
     }
+
+    .logo {
+        width: 60%;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
+    }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 791px) {
     .image-gallery .kuva {
         display: none;
     }
@@ -226,6 +233,13 @@ footer {
     h1 {
         margin: 20px auto;
         text-align: left;
+    }
+
+    .logo {
+        width: 50%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
     }
 }
 
@@ -256,8 +270,16 @@ footer {
     }
 
     .logo {
-        width: 300%;
-        height: auto;
+        width: 80%;
         max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        margin: 0 auto;
     }
 }

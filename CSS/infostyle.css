@@ -173,7 +173,17 @@ main {
     display: list-item
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 1410px) {
+
+    .logo {
+        width: 60%;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 791px) {
     .content {
         /*change the order on top of each other and center on mobile*/
         flex-direction: column;
@@ -183,5 +193,29 @@ main {
     .infoimage {
         width: 120px;
         height: 200px;
+    }
+
+    .logo {
+        width: 50%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .logo {
+        width: 80%;
+        max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        margin: 0 auto;
     }
 }
