@@ -16,7 +16,6 @@ body {
     background-color: #F2F1EB;
 }
 
-footer,
 article,
 nav {
     padding: 1em;
@@ -39,7 +38,7 @@ header {
 
 footer {
     background-color: #AFC8AD;
-    padding: 40px;
+    padding: 30px;
     width: 100%;
     position: relative;
     margin-top: auto;
