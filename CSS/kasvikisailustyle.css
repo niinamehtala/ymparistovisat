@@ -11,10 +11,10 @@ footer,
 nav {
     padding: 1em;
 }
-
+/* 
 li {
     display: inline-block;
-}
+} */
 
 html {
     margin: 0;
@@ -24,7 +24,7 @@ html {
 body {
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 120vh;
     margin: 0;
     background-color: #F2F1EB;
 }
@@ -67,6 +67,7 @@ nav {
 
 .nav-list li {
     margin: 0 15px;
+    position: relative;
 }
 
 .nav-list li a {
@@ -335,7 +336,7 @@ button:hover {
     }
 }
 
-@media only sceen and (max-width: 480px) {
+@media (max-width: 480px) {
     .logo {
         width: 80%;
         max-width: 280px;
