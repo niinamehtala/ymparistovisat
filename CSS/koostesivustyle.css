@@ -26,6 +26,8 @@ header {
 }
 
 .logo {
+    height: auto;
+    width: 30%;
     justify-content: center;
 }
 

@@ -59,6 +59,11 @@ header {
     justify-content: center;
 }
 
+.logo {
+    height: auto;
+    width: 30%;
+}
+
 nav {
     width: 70%;
 }
