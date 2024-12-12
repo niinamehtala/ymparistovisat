@@ -39,7 +39,8 @@
                         voit
                         valita
                         oman vastauksesi
-                        valmiista vaihtoehdoista. Pelin jälkeen näet
+                        valmiista vaihtoehdoista. Painamalla "Vastaa"-painiketta näet, menikö vastauksesi oikein vai
+                        väärin. Uusi kysymys tulee automaattisesti näkyviin. Pelin jälkeen näet
                         saamasi
                         pisteet.</p>
                 </div>
@@ -61,14 +62,13 @@
                 <div id="question-container"></div>
                 <select id="options-container"></select>
                 <img id="image-container" alt="Kysymyskuva" />
-                <button id="next-button">Seuraava kysymys</button>
+                <button id="next-button">Vastaa</button>
+                <!-- Palaute -->
+                <div id="feedback-container" class="hidden">
+                    <p id="feedback-text"></p>
+                    <p id="correct-answer-text"></p>
+                </div>
             </div>
-
-            <!-- Palaute -->
-            <!--             <div id="feedback-container" class="hidden">
-                <p id="feedback-text"></p>
-                <p id="correct-answer-text"></p>
-            </div> -->
 
             <!-- Lopputulossivu -->
             <div id="result-view" class="view">
