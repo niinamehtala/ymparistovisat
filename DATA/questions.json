@@ -1,0 +1,123 @@
+[
+    {
+        "question": "Mitä kasvinosia kasvinsyöjät yleensä syövät?",
+        "image": "../IMG/ravintotietouskuvat/1.kysymys_kukka.jpg",
+        "alt": "Tässä on kuva mansikan kukasta",
+        "options": [
+            "valitse vaihtoehdoista...",
+            "vain lehtiä",
+            "esim. hedelmiä, lehtiä, siemeniä, juuria",
+            "vain juuria ja oksia",
+            "en tiedä"
+        ],
+        "correct": "esim. hedelmiä, lehtiä, siemeniä, juuria"
+    },
+    {
+        "question": "Onko kuvan eläin kaikkiruokainen, lihansyöjä vai kasvinsyöjä?",
+        "image": "../IMG/ravintotietouskuvat/2.kysymys_karhu.jpg",
+        "options": [
+            "valitse vaihtoehdoista...",
+            "kaikkiruokainen",
+            "lihansyöjä",
+            "kasvinsyöjä",
+            "en tiedä"
+        ],
+        "correct": "kaikkiruokainen"
+    },
+    {
+        "question": "Onko kuvan eläin kaikkiruokainen, lihansyöjä vai kasvinsyöjä?",
+        "image": "../IMG/ravintotietouskuvat/3.kysymys_etana.jpg",
+        "options": [
+            "valitse vaihtoehdoista...",
+            "kaikkiruokainen",
+            "lihansyöjä",
+            "kasvinsyöjä",
+            "en tiedä"
+        ],
+        "correct": "kasvinsyöjä"
+    },
+    {
+        "question": "Mikä näistä on tärkeää huomioida, jos aloittaa talviruokinnan eläimille?",
+        "image": "../IMG/ravintotietouskuvat/4.kysymys_lintu.jpg",
+        "options": [
+            "valitse vaihtoehdoista...",
+            "Ei ole hyvä laittaa liian paljon ruokaa kerralla tarjolle.",
+            "Ruokkimista täytyy jatkaa talven loppuun saakka.",
+            "Ettei anna ruokaa koko talvea.",
+            "En tiedä."
+        ],
+        "correct": "Ruokkimista täytyy jatkaa talven loppuun saakka."
+    },
+    {
+        "question": "Mikä asia on tärkeää huomioida, kun etsii linnuille hyvää ruokintapaikkaa?",
+        "image": "../IMG/ravintotietouskuvat/5.kysymys_lintu_syo.jpg",
+        "options": [
+            "valitse vaihtoehdoista...",
+            "Sen täytyy suojata tuulelta ja pedoilta.",
+            "Sen täytyy olla kaukana asutuksesta.",
+            "Se on hyvä olla maan tasalla.",
+            "En tiedä."
+        ],
+        "correct": "Sen täytyy suojata tuulelta ja pedoilta."
+    },
+    {
+        "question": "Mitä ihminen voi antaa linnuille ruoaksi talvella?",
+        "image": "../IMG/ravintotietouskuvat/6.kysymys_lintu.jpg",
+        "options": [
+            "valitse vaihtoehdoista...",
+            "leivänmuruja ja pullan palasia",
+            "ruoantähteitä",
+            "esim. auringonkukan siemeniä, pähkinöitä ja talipalloja",
+            "en tiedä"
+        ],
+        "correct": "esim. auringonkukan siemeniä, pähkinöitä ja talipalloja"
+    },
+    {
+        "question": "Miten horroksessa talvensa viettävät eläimet saavat talvella ravintoa?",
+        "image": "../IMG/ravintotietouskuvat/7.kysymys_talvi.jpg",
+        "options": [
+            "valitse vaihtoehdoista...",
+            "Ne eivät tarvitse talvisin ravintoa.",
+            "Ne heräävät välillä horroksesta etsimään ruokaa.",
+            "Ne saavat energiaa syksyllä keräämästään vararavinnosta.",
+            "En tiedä."
+        ],
+        "correct": "Ne saavat energiaa syksyllä keräämästään vararavinnosta."
+    },
+    {
+        "question": "Mikä näistä eläimistä on hyönteissyöjä?",
+        "image": "../IMG/ravintotietouskuvat/8.kysymys_hyonteisia.jpg",
+        "options": [
+            "valitse vaihtoehdoista...",
+            "päästäinen",
+            "muikku",
+            "varpunen",
+            "en tiedä"
+        ],
+        "correct": "päästäinen"
+    },
+    {
+        "question": "Mikä näistä eläimistä on lihansyöjä?",
+        "image": "../IMG/ravintotietouskuvat/9.kysymys_orava_vaaka.jpg",
+        "options": [
+            "valitse vaihtoehdoista...",
+            "kana",
+            "jänis",
+            "kyykäärme",
+            "en tiedä"
+        ],
+        "correct": "kyykäärme"
+    },
+    {
+        "question": "Mitä karhut syövät?",
+        "image": "../IMG/ravintotietouskuvat/10.kysymys_karhu.jpg",
+        "options": [
+            "valitse vaihtoehdoista...",
+            "esim. marjoja, kaloja, nisäkkäitä",
+            "vain matelijoita",
+            "pääasiassa kasveja",
+            "en tiedä"
+        ],
+        "correct": "esim. marjoja, kaloja, nisäkkäitä"
+    }
+]
