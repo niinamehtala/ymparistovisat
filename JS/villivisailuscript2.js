@@ -153,6 +153,9 @@ function endQuiz() {
     const score = userAnswers.filter(answer => answer.isCorrect).length;
     scoreElement.textContent = `Sait ${score} pistettä ${questions.length} pisteestä!`;
 
+    /* Tallennetaan pistemäärä sessionStorageen: */
+    sessionStorage.setItem("villivisailuScore", score);
+
     /* Tyhjennetään tuloslaatikko ja lisätään käyttäjän vastaukset. */
     resultBox.innerHTML = ""; /* Tyhjentää aiemmat sisällöt, jos funktiota kutsutaan uudelleen. */
     userAnswers.forEach((answer, index) => {
