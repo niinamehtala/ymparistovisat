@@ -30,7 +30,7 @@ if (villivisailuScore !== null) {
 
 
 if (luontopoliisiScore !== null) {
-    luontopoliisiresultsElement.textContent = `Tulos: ${luontopoliisiScore}/??`;
+    luontopoliisiresultsElement.textContent = `Tulos: ${luontopoliisiScore}/4`;
 } else {
     luontopoliisiresultsElement.textContent = `Ei tulosta.`;
 }
@@ -44,7 +44,7 @@ if (kasvikisailuScore !== null) {
 
 //Yhteispisteet:
 if (totalScore > 0) {
-    totalScoreElement.textContent = `${totalScore}/40 pistettä`;
+    totalScoreElement.textContent = `${totalScore}/34 pistettä`;
 } else {
-    totalScoreElement.textContent = `0/40`;
+    totalScoreElement.textContent = `0/34`;
 }
