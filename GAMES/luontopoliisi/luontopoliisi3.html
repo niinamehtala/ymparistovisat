@@ -3,53 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/luontopoliisistyle.css">
+    <link rel="stylesheet" href="../../CSS/luontopoliisistyle/luontopoliisistyle3.css">
     <title>Pisteet</title>
-    <style>
-        main {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            gap: 20px; /* Väli elementtien välillä */
-            margin-top: 50px; /* Tyhjää headerin jälkeen */
-        }
-
-        h1 {
-            font-size: 2em;
-            margin: 0;
-        }
-
-        p#score {
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #333;
-            margin: 0;
-        }
-
-        .start-button {
-            padding: 10px 20px;
-            font-size: 1em;
-            background-color: #AFC8AD;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .start-button:hover {
-            background-color: #AFC8AD;
-        }
-    </style>
-    <script>
-        window.onload = function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const score = urlParams.get('score');
-            document.getElementById("score").textContent = `Sait ${score} pistettä!`;
-        };
-    </script>
 </head>
 <body>
     <header>
@@ -67,5 +22,6 @@
             OAMK, Web-projekti 2024, Ryhmä 3: Niina Mehtälä, Henna Orava, Rosa-Liina Vihelä, Nepu Kontio
         </div>
     </footer>
+    <script src="./JS/luontopoliisiscript/luontopoliisiscript3.js"></script>
 </body>
 </html>
