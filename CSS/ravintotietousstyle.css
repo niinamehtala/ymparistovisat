@@ -189,7 +189,6 @@ button:hover {
     margin-top: 25px;
 }
 
-/* Palaute piiloon aluksi*/
 #feedback-container.hidden {
     display: none;
 }
@@ -212,23 +211,6 @@ button:hover {
 #result-message {
     text-align: left;
     font-size: 30px;
-}
-
-
-/* Kuva vasemmalle */
-.text-content.img {
-    flex: 1;
-    max-width: 40%;
-    height: auto;
-    margin-right: 10px;
-}
-
-/* Tekstisisältö oikealle */
-.text-content.h1,
-p,
-button {
-    flex: 2;
-    text-align: justify;
 }
 
 .text-content {

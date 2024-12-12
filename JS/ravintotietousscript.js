@@ -11,7 +11,7 @@ import questions from '../DATA/questions.json' with { type: "json" };
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 
-// 2. Elementit ja kuuntelijat
+// 2. Elementit
 const introView = document.getElementById("intro");
 const questionView = document.getElementById("question-view");
 const resultView = document.getElementById("result-view");
@@ -27,6 +27,7 @@ const feedbackContainer = document.getElementById("feedback-container");
 // Aloitussivu näkyy ensimmäisenä
 showView(introView);
 
+// 2. Kuuntelijat
 startButton.addEventListener("click", () => {
     currentQuestionIndex = 0;
     correctAnswers = 0;
@@ -78,11 +79,6 @@ function showView(view) {
 // Näytetään kysymys
 function showQuestion() {
     const question = questions[currentQuestionIndex];
-    /*
-        if (!question) {
-            console.error("Kysymystä ei löytynyt! Tarkista JSON-tiedosto.");
-            return;
-        } */
     questionContainer.textContent = question.question;
     imageContainer.src = question.image || "";
     optionsContainer.innerHTML = "";
