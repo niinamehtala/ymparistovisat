@@ -8,34 +8,37 @@ const trashItems = [
 let currentIndex = 0;
 let score = 0;
 
+// Function to load the next trash item image
 function loadTrashItem() {
     const trashImage = document.getElementById("trash-image");
     trashImage.src = trashItems[currentIndex].image;
     trashImage.alt = "Roska";
 }
 
+// Function to check the user's answer and update the score
 function checkAnswer(selectedBin) {
     const result = document.getElementById("result");
     if (trashItems[currentIndex].correctBin === selectedBin) {
-        result.textContent = "Oikein!";
-        result.style.color = "green";
-        score++;
+        result.textContent = "Oikein!";  // Correct answer message
+        result.style.color = "green";  // Green color for correct answer
+        score++;  // Increment score
     } else {
-        result.textContent = "Väärin!";
-        result.style.color = "red";
+        result.textContent = "Väärin!";  // Wrong answer message
+        result.style.color = "red";  // Red color for incorrect answer
     }
 
     setTimeout(() => {
-        currentIndex++;
+        currentIndex++;  // Move to the next trash item
         if (currentIndex < trashItems.length) {
-            loadTrashItem();
-            result.textContent = "";
+            loadTrashItem();  // Load the next trash item image
+            result.textContent = "";  // Clear result message
         } else {
-            sessionStorage.setItem('luontopoliisiScore', score.toString());
-            const url = `./luontopoliisi3.html?score=${score}`;
-            window.location.href = url;
+            sessionStorage.setItem('luontopoliisiScore', score.toString());  // Save score in session storage
+            const url = `./luontopoliisi3.html?score=${score}`;  // Construct URL with score
+            window.location.href = url;  // Navigate to the result page
         }
-    }, 1000);
+    }, 1000);  // Delay of 1 second before moving to the next item
 }
 
+// Load the first trash item when the page is loaded
 window.onload = loadTrashItem;
