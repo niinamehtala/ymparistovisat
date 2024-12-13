@@ -1,63 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information about the webpage -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="../../CSS/luontopoliisistyle/luontopoliisistyle2.css">
+    
+    <!-- Title of webpage -->
     <title>Luontopoliisi</title>
 </head>
 <body>
+    <!-- Header section -->
     <header>
+        <!-- Logo of the game -->
         <img src="../../IMG/yleisetkuvat/logo_visaan.png" alt="logo" class="logo">
+        
+        <!-- Nav menu -->
         <nav>
             <ul class="nav-list">
-                <li><a href="../../index.html">Etusivu</a></li>
-                <li><a href="../../info.html">Info</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)">Pelit</a>
+                <li><a href="../../index.html">Etusivu</a></li> <!-- Link to the homepage -->
+                <li><a href="../../info.html">Info</a></li> <!-- Link to the info page -->
+                <li class="dropdown"> <!-- Dropdown menu for game links -->
+                    <a href="javascript:void(0)">Pelit</a> <!-- Dropdown trigger -->
                     <div class="dropdown-content">
+                        <!-- Links to various games -->
                         <a href="../kasvikisailu.html">Kasvikisailu</a>
                         <a href="./luontopoliisi.html">Luontopoliisi</a>
                         <a href="../ravintotietous.html">Ravintotietous</a>
                         <a href="../villivisailu1.html">Villivisailu</a>
-                        <a href="../koostesivu.html">Tulokset</a>
+                        <a href="../koostesivu.html">Tulokset</a> <!-- Link to results page -->
                     </div>
                 </li>
             </ul>
         </nav>
     </header>
+    
+    <!-- Main content -->
     <main>
-        <h1>Mihin jäteastiaan kuvan roska kuuluu?</h1>
+        <!-- Game instructions -->
+        <h1>Which bin does the trash in the image belong to?</h1>
 
+        <!-- Container for the game -->
         <div class="game-container">
+            <!-- Container for the trash image -->
             <div class="trash-container">
-                <img id="trash-image" src="" alt="Roska" class="game-image">
+                <img id="trash-image" src="" alt="Roska" class="game-image"> <!-- Trash image placeholder -->
             </div>
 
+            <!-- Buttons for selecting bins -->
             <div class="bins-container">
+                <!-- Button for bio-waste bin -->
                 <button onclick="checkAnswer('biojate')">
                     <img src="../../IMG/luontopoliisikuvat/biojate.png" alt="Biojäte">
                 </button>
+                <!-- Button for glass bin -->
                 <button onclick="checkAnswer('lasi')">
                     <img src="../../IMG/luontopoliisikuvat/lasi.png" alt="Lasi">
                 </button>
+                <!-- Button for plastic bin -->
                 <button onclick="checkAnswer('muovi')">
                     <img src="../../IMG/luontopoliisikuvat/muovi.png" alt="Muovi">
                 </button>
+                <!-- Button for paper bin -->
                 <button onclick="checkAnswer('paperi')">
                     <img src="../../IMG/luontopoliisikuvat/paperi.png" alt="Paperi">
                 </button>
             </div>
 
+            <!-- Paragraph to display result message -->
             <p id="result" class="result"></p>
         </div>
     </main>
+    
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
+            <!-- Footer text with project and author information -->
             OAMK, Web-projekti 2024: Luontopoliisi - Nepu Kontio, TIK24KM
         </div>
     </footer>
 
+    <!-- Link to the external JavaScript file for game logic -->
     <script src="../../JS/luontopoliisiscript/luontopoliisiscript2.js"></script>
 </body>
 </html>

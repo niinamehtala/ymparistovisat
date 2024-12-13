@@ -1,294 +1,130 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures consistent element sizing */
 }
 
 html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets the base font family */
+    margin: 0; /* Removes default margin */
+    font-size: 18px; /* Sets base font size for scaling */
 }
 
 body {
     display: flex;
-    flex-direction: column;
-    min-height: 120vh;
-    margin: 0;
-    background-color: #F2F1EB;
+    flex-direction: column; /* Makes body content stack vertically */
+    min-height: 120vh; /* Sets minimum height for the page */
+    margin: 0; /* Removes body margin */
+    background-color: #F2F1EB; /* Light beige background */
 }
 
-header,
-article,
-nav {
-    padding: 1em;
+header, article, nav {
+    padding: 1em; /* Adds consistent spacing inside these sections */
 }
 
 footer {
-    background-color: #AFC8AD;
-    padding: 50px;
-    width: 100%;
-    position: relative;
-    display: block;
-    margin-top: auto;
-    text-align: center;
+    background-color: #AFC8AD; /* Footer green background color */
+    padding: 50px; /* Spacing inside footer */
+    width: 100%; /* Full width footer */
+    position: relative; /* Keeps footer positioned relative to the page */
+    margin-top: auto; /* Pushes footer to the bottom if content is smaller than the viewport */
+    text-align: center; /* Centers footer content */
 }
 
 .footer-content {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-style: italic;
-    font-size: 20px;
+    max-width: 800px; /* Restricts footer content width */
+    margin: 0 auto; /* Centers content horizontally */
+    font-style: italic; /* Adds italic styling */
+    font-size: 20px; /* Sets footer text size */
 }
 
-p,
-h1 {
-    margin-left: 40px;
-    margin-top: 40px;
+p, h1 {
+    margin-left: 40px; /* Left-aligns paragraphs and headings */
+    margin-top: 40px; /* Adds spacing above paragraphs and headings */
 }
 
 header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    background-color: #AFC8AD;
-    justify-content: center;
+    flex-direction: column; /* Stacks header elements vertically */
+    align-items: center; /* Centers header content horizontally */
+    background-color: #AFC8AD; /* Header green background */
 }
 
 .logo {
-    height: auto;
-    width: 30%;
+    width: 30%; /* Sets logo width to 30% of the parent container */
 }
 
 nav {
-    width: 70%;
+    width: 70%; /* Restricts navigation width */
 }
 
 .nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
-    margin: 0;
-    width: 100%;
+    list-style: none; /* Removes default list styling */
+    display: flex; /* Aligns navigation links horizontally */
+    justify-content: space-between; /* Distributes links evenly */
 }
 
 .nav-list li {
-    margin: 0 15px;
-    position: relative;
+    margin: 0 15px; /* Adds horizontal spacing between list items */
+    position: relative; /* Required for dropdown positioning */
 }
 
 .nav-list li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* Sets text color */
+    font-weight: bold; /* Makes text bold */
 }
 
-.nav-list li a:hover {
-    color: #666;
-}
-
-.nav-list .dropdown > a::after {
-    content: " ▼";
-    font-size: 0.8em;
-    margin-left: 5px;
+.nav-list .dropdown:hover .dropdown-content {
+    display: block; /* Shows dropdown menu on hover */
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #AFC8AD;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 8px;
-    top: 100%;
-    left: 0;
-}
-
-.dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: #8FAE89;
-    color: #666;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
+    display: none; /* Hides dropdown by default */
+    position: absolute; /* Positions dropdown relative to its parent */
+    background-color: #AFC8AD; /* Green dropdown background */
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
-}
-
-.content {
-    display: flex;
-    width: 100%;
-    gap: 20px;
-}
-
-.content > article {
-    flex: 5;
-    min-height: 70vh;
-    display: flex;
-    flex-direction: row;
-}
-
-.col-1 {
-    display: flex;
-    flex-direction: column;
-    flex: 5;
-}
-
-.infoimage {
-    width: 300px;
-    height: 500px;
-}
-
-@media only screen and (max-width: 768px) {
-    .content {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .infoimage {
-        width: 120px;
-        height: 200px;
-    }
+    display: flex; /* Aligns main content horizontally */
+    justify-content: center; /* Centers main content */
+    padding: 20px; /* Adds padding around main content */
 }
 
 .game-start {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    margin-top: 20px;
-    min-height: 100vh;
-    background-color: #F2F1EB;
-}
-
-.game-start h1 {
-    font-size: 3rem;
-    font-weight: bold;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.game-image-placeholder {
-    width: 200px;
-    height: 200px;
-    margin: 20px 0;
-    border: 2px dashed #333;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.game-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
+    flex-direction: column; /* Aligns game-start elements vertically */
+    align-items: center; /* Centers content horizontally */
+    justify-content: center; /* Centers content vertically */
+    text-align: center; /* Centers text */
+    background-color: #F2F1EB; /* Matches body background */
 }
 
 .start-button {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    background-color: #AFC8AD;
-    border: none;
-    padding: 15px 30px;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-size: 1.5rem; /* Sets button text size */
+    background-color: #AFC8AD; /* Button green background */
+    border-radius: 8px; /* Rounds button corners */
 }
 
 .start-button:hover {
-    transform: scale(1.1);
-    background-color: #8FAE89;
-}
-
-@media (max-width: 1410px) {
-
-    .logo {
-        width: 60%;
-        max-width: 450px;
-        height: auto;
-        margin: 0 auto;
-    }
-}
-
-@media (max-width: 1200px) {
-    .game-start {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .game-start h1 {
-        font-size: 2.5rem;
-    }
+    transform: scale(1.1); /* Slightly enlarges button on hover */
+    background-color: #8FAE89; /* Darkens button color on hover */
 }
 
 @media (max-width: 768px) {
-    .game-image-placeholder {
-        width: 150px;
-        height: 150px;
-    }
-
-    .game-start h1 {
-        font-size: 2rem;
-    }
-
-    .start-button {
-        font-size: 1.2rem;
+    .content {
+        flex-direction: column; /* Stacks content vertically on smaller screens */
     }
 
     .logo {
-        width: 50%;
-        max-width: 400px;
-        height: auto;
-        margin: 0 auto;
+        width: 50%; /* Adjusts logo size for smaller screens */
     }
 }
 
 @media (max-width: 480px) {
-    .game-image-placeholder {
-        width: 120px;
-        height: 120px;
-    }
-
     .game-start h1 {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* Scales down header size for very small screens */
     }
 
     .start-button {
-        font-size: 1rem;
-    }
-
-    .logo {
-        width: 80%;
-        max-width: 280px;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    nav {
-        display: flex;
-        justify-content: center;
-        width: auto;
-        margin: 0 auto;
+        font-size: 1rem; /* Scales down button text size */
     }
 }

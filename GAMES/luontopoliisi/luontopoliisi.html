@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Meta information about the webpage -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS file -->
     <link rel="stylesheet" href="../../CSS/luontopoliisistyle/luontopoliisistyle.css">
+    
+    <!-- Page title -->
     <title>Luontopoliisi</title>
+    
+    <!-- Linking external JavaScript file, deferred to load after HTML -->
     <script src="./JS/luontopoliisiscript/luontopoliisiscript.js" defer></script>
 </head>
 <body>
+    <!-- Header section of page -->
     <header>
+        <!-- Logo -->
         <img src="../../IMG/yleisetkuvat/logo_visaan.png" alt="logo" class="logo">
+        
+        <!-- Nav menu -->
         <nav>
             <ul class="nav-list">
-                <li><a href="../../index.html">Etusivu</a></li>
-                <li><a href="../../info.html">Info</a></li>
-                <li class="dropdown">
-                    <a href="javascript:void(0)">Pelit</a>
+                <li><a href="../../index.html">Etusivu</a></li> <!-- Link to the homepage -->
+                <li><a href="../../info.html">Info</a></li> <!-- Link to the info page -->
+                <li class="dropdown"> <!-- Dropdown menu for games -->
+                    <a href="javascript:void(0)">Pelit</a> <!-- Dropdown trigger -->
                     <div class="dropdown-content">
+                        <!-- Links to different game pages -->
                         <a href="../kasvikisailu.html">Kasvikisailu</a>
                         <a href="./luontopoliisi.html">Luontopoliisi</a>
                         <a href="../ravintotietous.html">Ravintotietous</a>
                         <a href="../villivisailu1.html">Villivisailu</a>
-                        <a href="../koostesivu.html">Tulokset</a>
+                        <a href="../koostesivu.html">Tulokset</a> <!-- Results page -->
                     </div>
+                </li>
             </ul>
         </nav>
     </header>
+    
+    <!-- Main content -->
     <main>
         <div class="game-start">
-            <h1>Luontopoliisi</h1>
+            <h1>Luontopoliisi</h1> <!-- Game title -->
             <div class="game-image-placeholder">
+                <!-- Placeholder for game image -->
                 <img src="../../IMG/luontopoliisikuvat/Police.png" alt="poliisi" class="game-image">
             </div>
+            <!-- Button to start the game, redirects to another page -->
             <button class="start-button" onclick="location.href='./luontopoliisi2.html'">Aloita peli</button>
         </div>
     </main>
+    
+    <!-- Footer -->
     <footer>
         <div class="footer-content">
             OAMK, Web-projekti 2024: Luontopoliisi - Nepu Kontio, TIK24KM

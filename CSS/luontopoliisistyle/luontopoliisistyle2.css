@@ -1,249 +1,135 @@
 * {
-    box-sizing: border-box;
+    box-sizing: border-box; /* Ensures consistent padding and border sizes across elements */
 }
 
 html {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a modern, clean font for the entire document */
+    margin: 0; /* Removes default browser margin */
+    font-size: 18px; /* Base font size for scalable designs */
 }
 
 body {
     display: flex;
-    flex-direction: column;
-    min-height: 120vh;
-    margin: 0;
-    background-color: #F2F1EB;
+    flex-direction: column; /* Stacks page elements vertically */
+    min-height: 120vh; /* Ensures the body is tall enough to fit viewport with some scrolling */
+    margin: 0; /* Removes default browser margin */
+    background-color: #F2F1EB; /* Light beige background for aesthetics */
 }
 
-header,
-footer,
-article,
-nav {
-    padding: 1em;
+header, footer, article, nav {
+    padding: 1em; /* Adds spacing around the main structural elements */
 }
 
-p,
-h1 {
-    margin-left: 40px;
-    margin-top: 40px;
+p, h1 {
+    margin-left: 40px; /* Aligns paragraphs and headings with padding from the edge */
+    margin-top: 40px; /* Adds vertical spacing between text blocks */
 }
 
 header {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-    background-color: #AFC8AD;
-    justify-content: center;
+    flex-direction: column; /* Stacks header elements vertically */
+    align-items: center; /* Centers content horizontally */
+    padding: 10px; /* Provides padding around header content */
+    background-color: #AFC8AD; /* Green header background for branding */
+    justify-content: center; /* Centers items vertically within the header */
 }
 
 .logo {
     height: auto;
-    width: 30%;
+    width: 30%; /* Responsive scaling for logo */
 }
 
 nav {
-    width: 70%;
+    width: 70%; /* Restricts the navigation width for better layout */
 }
 
 .nav-list {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
+    list-style: none; /* Removes default list bullets */
+    display: flex; /* Aligns navigation links in a row */
+    justify-content: space-between; /* Spaces out navigation items evenly */
     padding: 0;
     margin: 0;
-    width: 100%;
-}
-
-.nav-list li {
-    margin: 0 15px;
-    position: relative;
 }
 
 .nav-list li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    text-decoration: none; /* Removes underline from links */
+    color: #333; /* Dark text color for readability */
+    font-weight: bold; /* Boldens the links for emphasis */
+    font-size: 18px; /* Sets a standard size for navigation links */
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .nav-list li a:hover {
-    color: #666;
-}
-
-.nav-list .dropdown > a::after {
-    content: " ▼";
-    font-size: 0.8em;
-    margin-left: 5px;
+    color: #666; /* Changes link color on hover for interactivity */
 }
 
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #AFC8AD;
-    min-width: 160px;
-    z-index: 1;
-    border-radius: 8px;
-    top: 100%;
-    left: 0;
-}
-
-.dropdown-content a {
-    color: #333;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-
-.dropdown-content a:hover {
-    background-color: #8FAE89;
-    color: #666;
+    display: none; /* Hides dropdown menu by default */
+    position: absolute; /* Positions dropdown relative to parent item */
+    background-color: #AFC8AD; /* Green dropdown background for consistency */
+    min-width: 160px; /* Sets minimum width for dropdown */
+    border-radius: 8px; /* Smoothly rounds corners */
 }
 
 .dropdown:hover .dropdown-content {
-    display: block;
+    display: block; /* Shows dropdown on hover */
 }
 
 footer {
-    background-color: #AFC8AD;
-    padding: 50px;
-    width: 100%;
-    position: relative;
-    display: block;
-    margin-top: auto;
-    text-align: center;
+    background-color: #AFC8AD; /* Green footer background for branding consistency */
+    padding: 50px; /* Adds spacing for better readability */
+    width: 100%; /* Full-width footer */
+    margin-top: auto; /* Ensures footer stays at the bottom of the page */
+    text-align: center; /* Centers footer text */
 }
 
 .footer-content {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-style: italic;
-    font-size: 20px;
+    max-width: 800px; /* Restricts footer content width */
+    margin: 0 auto; /* Centers content within footer */
+    font-style: italic; /* Adds stylistic emphasis */
+    font-size: 20px; /* Enlarges footer text */
 }
 
 .game-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
-}
-
-.trash-container {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.game-image {
-    max-width: 200px;
-    max-height: 200px;
-    margin: 10px 0;
+    flex-direction: column; /* Aligns game elements vertically */
+    align-items: center; /* Centers game content */
+    margin: 20px; /* Adds spacing around game container */
 }
 
 .bins-container {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    margin-top: 20px;
-}
-
-.bins-container button {
-    border: none;
-    background-color: transparent;
-    cursor: pointer;
+    justify-content: center; /* Centers the bin images */
+    gap: 30px; /* Adds spacing between bins */
+    margin-top: 20px; /* Adds spacing above the bins container */
 }
 
 .bins-container img {
-    width: 120px;
-    height: auto;
-    transition: transform 0.3s ease;
+    width: 120px; /* Sets bin image size */
+    transition: transform 0.3s ease; /* Adds a smooth scaling effect on hover */
 }
 
 .bins-container img:hover {
-    transform: scale(1.2);
-}
-
-.result {
-    text-align: center;
-    font-size: 1.4em;
-    font-weight: bold;
-    margin-top: 20px;
-}
-
-@media (max-width: 1410px) {
-
-    .logo {
-        width: 60%;
-        max-width: 450px;
-        height: auto;
-        margin: 0 auto;
-    }
+    transform: scale(1.2); /* Enlarges the bin image on hover for interactivity */
 }
 
 @media (max-width: 768px) {
     .nav-list {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        align-items: center;
-    }
-
-    .nav-list li {
-        margin: 0 14px;
-    }
-
-    .game-image {
-        width: 150px;
-        height: 150px;
+        flex-direction: row; /* Aligns navigation links horizontally on smaller screens */
+        justify-content: space-around; /* Adjusts spacing for smaller viewports */
     }
 
     .bins-container {
-        flex-direction: column;
-    }
-
-    .bins-container img {
-        width: 100px;
-    }
-
-    .logo {
-        width: 50%;
-        max-width: 400px;
-        height: auto;
-        margin: 0 auto;
+        flex-direction: column; /* Stacks bins vertically on narrow screens */
     }
 }
 
 @media (max-width: 480px) {
     header h1 {
-        font-size: 1.5em;
-    }
-
-    .game-image {
-        width: 120px;
-        height: 120px;
+        font-size: 1.5em; /* Reduces heading size for very small screens */
     }
 
     .result {
-        font-size: 1.2em;
-    }
-
-    .logo {
-        width: 80%;
-        max-width: 280px;
-        height: auto;
-        margin: 0 auto;
-    }
-
-    nav {
-        display: flex;
-        justify-content: center;
-        width: auto;
-        margin: 0 auto;
+        font-size: 1.2em; /* Reduces result text size for readability */
     }
 }
