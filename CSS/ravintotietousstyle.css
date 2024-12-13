@@ -3,7 +3,6 @@
 }
 
 header,
-footer,
 nav {
     padding: 1em;
 }
@@ -151,8 +150,11 @@ footer {
     background-color: #AFC8AD;
     padding: 26px;
     width: 100%;
-    position: relative;
     margin-top: auto;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -162,9 +164,9 @@ footer {
     font-size: 20px;
     font-style: italic;
     color: #333;
-    padding-left: 20px;
-    padding-right: 20px;
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 #question-container {
@@ -264,6 +266,15 @@ button:hover {
     text-align: center;
 }
 
+@media (max-width: 1410px) {
+
+    .logo {
+        width: 60%;
+        max-width: 450px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
 
 /* responsiivisuus  */
 @media (max-width: 1200px) {
@@ -294,6 +305,10 @@ button:hover {
         text-align: left;
         max-width: 90%;
     }
+
+    .footer-content p {
+        text-align: center;
+    }    
 }
 
 @media (max-width: 768px) {
@@ -322,6 +337,13 @@ button:hover {
         width: 100%;
         margin: 10px 0;
     }
+
+    .logo {
+        width: 50%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -338,9 +360,17 @@ button:hover {
     }
 
     .logo {
-        width: 300%;
-        height: auto;
+        width: 80%;
         max-width: 280px;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    nav {
+        display: flex;
+        justify-content: center;
+        width: auto;
+        margin: 0 auto;
     }
 
     .content.kuva {
