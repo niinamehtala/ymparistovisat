@@ -28,6 +28,7 @@ const feedbackContainer = document.getElementById("feedback-container");
 showView(introView);
 
 // 2. Kuuntelijat
+//Aloitus-nappi:
 startButton.addEventListener("click", () => {
     currentQuestionIndex = 0;
     correctAnswers = 0;
@@ -35,6 +36,7 @@ startButton.addEventListener("click", () => {
     showQuestion();
 });
 
+//Vastaa-nappi:
 nextButton.addEventListener("click", () => {
     const selectedAnswer = optionsContainer.value;
     const question = questions[currentQuestionIndex];
@@ -111,3 +113,7 @@ function showFeedback(isCorrect, correctAnswer) {
 function saveScoreToSession(value) {
     sessionStorage.setItem("ravintotietousScore", value);
 }
+
+
+/* Lähteet:
+Tämän pelin kuuntelijan (nextButton) osioihin showFeedback ja setTimeOut kirjoittamiseen on hyödynnetty tekoälyä: ChatGPT (OpenAI, 2024). */

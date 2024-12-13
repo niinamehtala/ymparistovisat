@@ -44,6 +44,7 @@ header {
     background-color: #AFC8AD;
     padding: 10px;
     justify-content: center;
+    width: 100%;
 }
 
 
@@ -82,7 +83,7 @@ nav {
     color: #666;
 }
 
-.nav-list .dropdown > a::after {
+.nav-list .dropdown>a::after {
     content: " ▼";
     font-size: 0.8em;
     margin-left: 5px;
