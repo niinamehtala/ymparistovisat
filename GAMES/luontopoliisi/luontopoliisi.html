@@ -3,13 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../CSS/luontopoliisistyle.css">
+    <link rel="stylesheet" href="../../CSS/luontopoliisistyle/luontopoliisistyle.css">
     <title>Luontopoliisi</title>
-    <script>
-        function startGame() {
-            window.location.href = "./luontopoliisi2.html";
-        }
-    </script>
+    <script src="./JS/luontopoliisiscript/luontopoliisiscript.js" defer></script>
 </head>
 <body>
     <header>
@@ -36,7 +32,7 @@
             <div class="game-image-placeholder">
                 <img src="../../IMG/luontopoliisikuvat/Police.png" alt="poliisi" class="game-image">
             </div>
-            <button class="start-button" onclick="startGame()">Aloita peli</button>
+            <button class="start-button" onclick="location.href='./luontopoliisi2.html'">Aloita peli</button>
         </div>
     </main>
     <footer>
