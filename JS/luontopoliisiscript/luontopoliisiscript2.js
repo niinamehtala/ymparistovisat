@@ -31,6 +31,7 @@ function checkAnswer(selectedBin) {
             loadTrashItem();
             result.textContent = "";
         } else {
+            sessionStorage.setItem('luontopoliisiScore', score.toString());
             const url = `./luontopoliisi3.html?score=${score}`;
             window.location.href = url;
         }
