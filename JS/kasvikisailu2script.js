@@ -184,11 +184,11 @@ function showResultScreen() {
     
     if (points <= 3) {
         scoreName.textContent = "Kasvinoviisi"
-    } else if (3 < points <= 6) {
+    } else if (points > 3 && points <= 6) {
         scoreName.textContent = "Kasviharrastelija"
-    } else if (6 < points <= 9) {
+    } else if (points > 6 && points < 10) {
         scoreName.textContent = "Kasvitietäjä"
-    } else if (points == 10) {
+    } else if (points === 10) {
         scoreName.textContent = "Kasvikuningas"
     }
 
