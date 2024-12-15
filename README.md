@@ -17,7 +17,7 @@
   * [Credits](#credits)
 
 # Ympäristövisat
-Ympäristövisat is an educational website designed for elementary school students. The site includes four different quizzes that focus on various aspects of environmental knowledge and awareness. The quizzes aim to make learning fun and engaging for young learners. There are four different games: [Kasvikisailu](#kasvikisailu), [Ympäristöpoliisi](#ympäristöpoliisi), [Ravintotietous](#ravintotietous) and [Villivisailu](#villivisailu).
+Ympäristövisat is an educational website designed for elementary school students. The site includes four different quizzes that focus on environmental knowledge and awareness. The quizzes aim to make learning fun and engaging for young learners. There are four different games: [Kasvikisailu](#kasvikisailu), [Ympäristöpoliisi](#ympäristöpoliisi), [Ravintotietous](#ravintotietous) and [Villivisailu](#villivisailu).
 
 
 ## Sections
@@ -46,14 +46,14 @@ Learn about plants! This quiz challenges students to identify different plants a
 
 ## How to use
 
-1.	**Etusivu**: The starting point of the site. Here, you’ll find general information about the site and its purpose.
-2.	**Info**: Provides details about the site, its creators, contact information and image copyrights.
-3.	**Kasvikisailu**: Kasvikisailu is a quiz consisting of ten multiple-choice questions. The goal is to test your knowledge about plants. Here’s how it works:
+1.	**Etusivu**: The starting point of the site. You’ll find general information about the site and its purpose.
+2.	**Info**: Details about the site, its creators, contact information and image copyrights.
+3.	**Kasvikisailu**: Kasvikisailu is a quiz that has ten multiple-choice questions to test knowledge about plants. Here’s how it works:
 
  * Read each question carefully and choose the answer you think is correct.
- * After selecting an answer, click the "Seuraava" (Next) button to proceed to the next question.
+ * After selecting an answer, click the "Seuraava" (Next) button to move to the next question.
  * After each question, you’ll immediately see whether your answer was correct or not. The next question will appear automatically after the correct answer is displayed.
- * At the end of the quiz, you’ll receive your total score along with a special plant title (Kasvititteli) based on your performance.
+ * At the end of the quiz, you’ll receive your total score and a "plant title" (Kasvititteli) based on your performance.
  
 4. **Ympäristöpoliisi**:
 5. **Ravintotietous**:
@@ -68,7 +68,7 @@ Learn about plants! This quiz challenges students to identify different plants a
 
 ## Installation and setup
 
-This project is hosted on GitHub Pages, so no installation is required. Visit the following link to start exploring the quizzes:
+This project is hosted on GitHub Pages, so no installation is required. Visit the following link to start playing:
 
 👉 [Ympäristövisat on GitHub Pages](https://niinamehtala.github.io/ymparistovisat/)
 
