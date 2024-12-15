@@ -17,7 +17,7 @@
   * [Credits](#credits)
 
 # Ympäristövisat
-Ympäristövisat is an educational website designed for elementary school students. The site includes four different quizzes that focus on environmental knowledge and awareness. The quizzes aim to make learning fun and engaging for young learners. There are four different games: [Kasvikisailu](#kasvikisailu), [Ympäristöpoliisi](#ympäristöpoliisi), [Ravintotietous](#ravintotietous) and [Villivisailu](#villivisailu).
+Ympäristövisat is an educational website designed for elementary school students. The site includes four different quizzes that focus on environmental knowledge. The quizzes aim to make learning fun and engaging for young learners. There are four different games: [Kasvikisailu](#kasvikisailu), [Ympäristöpoliisi](#ympäristöpoliisi), [Ravintotietous](#ravintotietous) and [Villivisailu](#villivisailu).
 
 
 ## Sections
