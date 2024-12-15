@@ -27,7 +27,6 @@ The project contains the following key sections:
 ### Info
 ### Tulokset
 
- and games:
 
 ### Kasvikisailu
 
