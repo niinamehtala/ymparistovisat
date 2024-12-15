@@ -21,7 +21,7 @@ Ympäristövisat is an educational website designed for elementary school studen
 
 
 ## Sections
-The project contains the following key sections:
+The project contains the following sections:
 
 ### Etusivu
 ### Info
