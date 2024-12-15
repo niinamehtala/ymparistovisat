@@ -51,10 +51,10 @@ Learn about plants! This quiz challenges students to identify different plants a
 2.	**Info**: Provides details about the site, its creators, contact information and image copyrights.
 3.	**Kasvikisailu**: Kasvikisailu is a quiz consisting of ten multiple-choice questions. The goal is to test your knowledge about plants. Here’s how it works:
 
- * 1. Read each question carefully and choose the answer you think is correct.
- * 2. After selecting an answer, click the "Seuraava" (Next) button to proceed to the next question.
- * 3. After each question, you’ll immediately see whether your answer was correct or not. The next question will appear automatically after the correct answer is displayed.
- * 4. At the end of the quiz, you’ll receive your total score along with a special plant title (Kasvititteli) based on your performance.
+ * Read each question carefully and choose the answer you think is correct.
+ * After selecting an answer, click the "Seuraava" (Next) button to proceed to the next question.
+ * After each question, you’ll immediately see whether your answer was correct or not. The next question will appear automatically after the correct answer is displayed.
+ * At the end of the quiz, you’ll receive your total score along with a special plant title (Kasvititteli) based on your performance.
  
 4. **Ympäristöpoliisi**:
 5. **Ravintotietous**:
