@@ -32,7 +32,7 @@ The project contains the following sections:
 
 Learn about plants! This quiz challenges students to identify different plants and understand their features.
 
-### Ympäristöpoliisi
+### Luontopoliisi
 
 --- text here
 
@@ -42,7 +42,7 @@ The questions of this game are related to animal nutrition. It can be played ind
 
 ### Villivisailu
 
---- text
+In Villivisailu, you can test your knowledge of Finnish nature. The game features ten questions with related images, and you’ll see immediately whether your answer is correct or incorrect. At the end, you'll receive a summary of your performance.
 
 ## How to use
 
@@ -55,10 +55,10 @@ The questions of this game are related to animal nutrition. It can be played ind
  * After each question, you’ll immediately see whether your answer was correct or not. The next question will appear automatically after the correct answer is displayed.
  * At the end of the quiz, you’ll receive your total score and a "plant title" (Kasvititteli) based on your performance.
 
-4. **Ympäristöpoliisi**:
+4. **Luontopoliisi**:
 5. **Ravintotietous**: The game consists of 10 questions and there are ready-made answer options for each question. After answering each question, you will see whether your answer was correct or incorrect. If you answered incorrectly, you will see the correct answer. For each correct answer you earn one point.
 The next question changes automatically after 2.5 seconds. At the end of the game, you will also see your total score.
-6. **Villivisailu**:
+6. **Villivisailu**: Read each question carefully and select the answer you think is correct by clicking the corresponding option. If your answer is correct, the text box turns green. If it's incorrect, the box turns red, and the correct answer is highlighted in green. The next question appears automatically after you answer. At the end of the game, you will see your total score and a summary of your answers.
 7.	**Tulokset**: After completing quizzes, visit the score page to see your points.
 
 ## Technologies used
@@ -84,5 +84,5 @@ This game was created by students of Oulu University of Applied Sciences (OAMK):
 
 * Niina Mehtälä (github: niinamehtala)
 * Rosa-Liina Vihelä (github: rosa-liina)
-*
+* Henna Orava (github: hennaorava)
 *
