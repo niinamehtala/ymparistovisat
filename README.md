@@ -38,7 +38,7 @@ Learn about plants! This quiz challenges students to identify different plants a
 
 ### Ravintotietous
 
---- text
+The questions of this game are related to animal nutrition. It can be played individually or the questions can be discussed with a friend.
 
 ### Villivisailu
 
@@ -54,9 +54,10 @@ Learn about plants! This quiz challenges students to identify different plants a
  * After selecting an answer, click the "Seuraava" (Next) button to move to the next question.
  * After each question, you’ll immediately see whether your answer was correct or not. The next question will appear automatically after the correct answer is displayed.
  * At the end of the quiz, you’ll receive your total score and a "plant title" (Kasvititteli) based on your performance.
- 
+
 4. **Ympäristöpoliisi**:
-5. **Ravintotietous**:
+5. **Ravintotietous**: The game consists of 10 questions and there are ready-made answer options for each question. After answering each question, you will see whether your answer was correct or incorrect. If you answered incorrectly, you will see the correct answer. For each correct answer you earn one point.
+The next question changes automatically after 2.5 seconds. At the end of the game, you will also see your total score.
 6. **Villivisailu**:
 7.	**Tulokset**: After completing quizzes, visit the score page to see your points.
 
@@ -82,7 +83,6 @@ This project is hosted on GitHub Pages, so no installation is required. Visit th
 This game was created by students of Oulu University of Applied Sciences (OAMK):
 
 * Niina Mehtälä (github: niinamehtala)
+* Rosa-Liina Vihelä (github: rosa-liina)
 *
 *
-*
-
