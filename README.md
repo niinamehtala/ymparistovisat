@@ -22,6 +22,10 @@ Ympäristövisat is an educational website designed for elementary school studen
 Check out the video preview of Ympäristövisat on Youtube:
 👉 [Ympäristövisat - esittelyvideo](https://youtu.be/iCzk8-fkRBE)
 
+Visit the following link to start playing:
+👉 [Ympäristövisat on GitHub Pages](https://niinamehtala.github.io/ymparistovisat/)
+
+
 ## Sections
 The project contains the following sections:
 
