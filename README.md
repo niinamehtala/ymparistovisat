@@ -7,7 +7,7 @@
     * [Info](#info)
     * [Tulokset](#tulokset)
     * [Kasvikisailu](#kasvikisailu)
-    * [Ympäristöpoliisi](#ympäristöpoliisi)
+    * [Luontopoliisi](#luontopoliisi)
     * [Ravintotietous](#ravintotietous)
     * [Villivisailu](#villivisailu)
   * [How to use](#how-to-use)
@@ -17,8 +17,10 @@
   * [Credits](#credits)
 
 # Ympäristövisat
-Ympäristövisat is an educational website designed for elementary school students. The site includes four different quizzes that focus on environmental knowledge. The quizzes aim to make learning fun and engaging for young learners. There are four different games: [Kasvikisailu](#kasvikisailu), [Ympäristöpoliisi](#ympäristöpoliisi), [Ravintotietous](#ravintotietous) and [Villivisailu](#villivisailu).
+Ympäristövisat is an educational website designed for elementary school students. The site includes four different quizzes that focus on environmental knowledge. The quizzes aim to make learning fun and engaging for young learners. There are four different games: [Kasvikisailu](#kasvikisailu), [Luontopoliisi](#luontopoliisi), [Ravintotietous](#ravintotietous) and [Villivisailu](#villivisailu).
 
+Check out the video preview of Ympäristövisat on Youtube:
+👉 [Ympäristövisat - esittelyvideo](https://youtu.be/iCzk8-fkRBE)
 
 ## Sections
 The project contains the following sections:
@@ -34,7 +36,7 @@ Learn about plants! This quiz challenges students to identify different plants a
 
 ### Luontopoliisi
 
---- text here
+Test your knowledge about recycling different pieces of trash. Features four images of different types of trash to recycle in their rightful bins.
 
 ### Ravintotietous
 
@@ -55,7 +57,7 @@ In Villivisailu, you can test your knowledge of Finnish nature. The game feature
  * After each question, you’ll immediately see whether your answer was correct or not. The next question will appear automatically after the correct answer is displayed.
  * At the end of the quiz, you’ll receive your total score and a "plant title" (Kasvititteli) based on your performance.
 
-4. **Luontopoliisi**:
+4. **Luontopoliisi**: Look at the pictures of trash and use your recycling knowledge to figure out the right bin to put those trash into. After answering, you will see if you got it right or wrong. you can get the max point of four from this game.
 5. **Ravintotietous**: The game consists of 10 questions and there are ready-made answer options for each question. After answering each question, you will see whether your answer was correct or incorrect. If you answered incorrectly, you will see the correct answer. For each correct answer you earn one point.
 The next question changes automatically after 2.5 seconds. At the end of the game, you will also see your total score.
 6. **Villivisailu**: Read each question carefully and select the answer you think is correct by clicking the corresponding option. If your answer is correct, the text box turns green. If it's incorrect, the box turns red, and the correct answer is highlighted in green. The next question appears automatically after you answer. At the end of the game, you will see your total score and a summary of your answers.
@@ -85,4 +87,4 @@ This game was created by students of Oulu University of Applied Sciences (OAMK):
 * Niina Mehtälä (github: niinamehtala)
 * Rosa-Liina Vihelä (github: rosa-liina)
 * Henna Orava (github: hennaorava)
-*
+* Nepu Kontio (github: n3koai00)
